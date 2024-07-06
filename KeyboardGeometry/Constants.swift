@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Constants {
   enum Width: CGFloat {
@@ -61,6 +62,20 @@ enum Constants {
   enum Radius: CGFloat {
     case whiteKey = 2.5
     case blackKey = 1.2
+  }
+  
+  enum ArcAngle {
+    case one
+    case two
+    
+    var angle: Angle {
+      switch self {
+      case .one:
+        return Angle(degrees: 0)
+      case .two:
+        return Angle(degrees: 90.0)
+      }
+    }
   }
   
   enum Offset: CGFloat {

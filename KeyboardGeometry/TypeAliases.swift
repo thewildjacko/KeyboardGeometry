@@ -13,3 +13,4 @@ typealias Radius = Constants.Radius
 typealias Offset = Constants.Offset
 typealias AddendMod = Width.AddendMod
 typealias Addend = (KeyType) -> CGFloat
+typealias ArcAngle = Constants.ArcAngle
