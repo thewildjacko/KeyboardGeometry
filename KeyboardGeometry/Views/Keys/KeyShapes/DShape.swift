@@ -30,9 +30,7 @@ struct DShape: Shape {
       let y3 = height
       
       let arcCenter1 = CGPoint(x: width - radius, y: height - radius)
-      let arcCenter2 = CGPoint(x: radius, y: y3 - radius)
-      let arcAngle2 = Angle(degrees: 90.0)
-      
+      let arcCenter2 = CGPoint(x: radius, y: y3 - radius)      
       
       path.move(to: CGPoint(x: x0, y: y0))
       

@@ -45,10 +45,10 @@ struct FandBShape: Shape {
         delta: ArcAngle.two.angle
       )
       
-      path.addLine(to: CGPoint(x: x3, y: height))
+      path.addLine(to: CGPoint(x: x3, y: y3))
       
       path.addRelativeArc(
-        center: CGPoint(x: radius, y: height - radius),
+        center: arcCenter2,
         radius: radius,
         startAngle: ArcAngle.two.angle,
         delta: ArcAngle.two.angle
