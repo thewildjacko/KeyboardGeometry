@@ -65,7 +65,7 @@ extension KeyProtocol {
   var fill: Color {
     switch type {
     case .C, .D, .E, .F, .G, .A, .B, .endingC, .endingE:
-      return .clear
+      return .white
     case .Db, .Eb, .Gb, .Ab, .Bb:
       return .black
     }
