@@ -1,5 +1,5 @@
 //
-//  EndingCShape.swift
+//  EndingCandEShape.swift
 //  KeyboardGeometry
 //
 //  Created by Jake Smolowe on 7/5/24.

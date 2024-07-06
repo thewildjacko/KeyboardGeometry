@@ -65,12 +65,10 @@ struct Keyboard: View {
       if index == 0 {
 //        print("widthMod: \(widthMod)")
         keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
-//        keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       } else {
         keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
-//        keys.append(Key(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       }

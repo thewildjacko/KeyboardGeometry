@@ -1,5 +1,5 @@
 //
-//  TheKey.swift
+//  Key.swift
 //  KeyboardGeometry
 //
 //  Created by Jake Smolowe on 7/5/24.
