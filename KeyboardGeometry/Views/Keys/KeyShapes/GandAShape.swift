@@ -26,6 +26,7 @@ struct GandAShape: Shape {
       let y0 = 0.0
       let y1 = bWidth *  Constants.blackKeyHeightMultiplier
       let y2 = height - radius * 2
+      let y3 = height
       
       let arcCenter1 = CGPoint(x: x2 - radius, y: height - radius)
       let arcCenter2 = CGPoint(x: radius, y: height - radius)
@@ -49,7 +50,7 @@ struct GandAShape: Shape {
         delta: ArcAngle.two.angle
       )
 
-      path.addLine(to: CGPoint(x: x3, y: height))
+      path.addLine(to: CGPoint(x: x3, y: y3))
 
       path.addRelativeArc(
         center: arcCenter2,
