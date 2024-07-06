@@ -16,7 +16,7 @@ struct CandEShape: Shape {
   func path(in rect: CGRect) -> Path {
     Path { path in
       let bWidth = Width.blackKey.rawValue * widthMultiplier
-      let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
+      let bHeight = bWidth * Constants.blackKeyHeightMultiplier
       
       path.addLines(
         [

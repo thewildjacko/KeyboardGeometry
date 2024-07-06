@@ -13,7 +13,6 @@ struct Key: View, KeyProtocol, Identifiable {
   var type: KeyType
   var octave: CGFloat = 0
   var geometry: GeometryProxy
-  var size: CGFloat
   var widthMod: CGFloat
   var initialKey: Bool = false
   var keyOffset: CGFloat = 0
@@ -158,14 +157,14 @@ struct Key: View, KeyProtocol, Identifiable {
           ))
         .stroke(.black, lineWidth: 1)
       case .endingC, .endingE:
-        EndingCandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
+        EndingCandEShape(width: width, height: height, radius: radius).path(
           in: CGRect(
             x: 0, y: 0,
             width: width, height: height
           ))
         .fill(fill)
         
-        EndingCandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
+        EndingCandEShape(width: width, height: height, radius: radius).path(
           in: CGRect(
             x: 0, y: 0,
             width: width, height: height
@@ -180,17 +179,17 @@ struct Key: View, KeyProtocol, Identifiable {
 }
 
 extension Key {
-  init(type: KeyType = .C, geometry: GeometryProxy, size: CGFloat, widthMod: CGFloat) {
+  init(type: KeyType = .C, geometry: GeometryProxy, widthMod: CGFloat) {
     self.type = type
     self.geometry = geometry
-    self.size = size
+    
     self.widthMod = widthMod
   }
 }
 
 #Preview {
   GeometryReader { geometry in
-    Key(type: .C, geometry: geometry, size: 1, widthMod: 23)
+    Key(type: .C, geometry: geometry, widthMod: 23)
   }
   .frame(width: 23 * 4, height: 96 * 4)
   .border(.black)

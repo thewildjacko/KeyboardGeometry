@@ -12,15 +12,12 @@ struct DShape: Shape {
   var height: CGFloat
   var radius: CGFloat
   var widthMultiplier: CGFloat
-
+  
   func path(in rect: CGRect) -> Path {
     Path { path in
-//      let width = Width.whiteKeyDFB.rawValue
-//      let height = Height.whiteKey.rawValue
       let DbAddend = AddendMod.Db.rawValue * widthMultiplier
       let bWidth = Width.blackKey.rawValue * widthMultiplier
       let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
-//      let radius = Radius.whiteKey.rawValue
       
       path.move(to: CGPoint(x: DbAddend, y: 0))
       

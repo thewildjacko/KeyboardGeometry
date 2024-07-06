@@ -81,5 +81,6 @@ enum Constants {
   }
   
   public static let frameModifier: CGFloat = 187
+  public static let blackKeyHeightMultiplier = Height.blackKey.rawValue/Width.blackKey.rawValue
 }
 

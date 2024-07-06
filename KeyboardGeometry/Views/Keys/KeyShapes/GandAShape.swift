@@ -15,12 +15,9 @@ struct GandAShape: Shape {
   
   func path(in rect: CGRect) -> Path {
     Path { path in
-//      let width = Width.whiteKeyCEGA.rawValue
-//      let height = Height.whiteKey.rawValue
       
       let bWidth = Width.blackKey.rawValue * widthMultiplier
-      let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
-//      let radius = Radius.whiteKey.rawValue
+      let bHeight = bWidth *  Constants.blackKeyHeightMultiplier
       
       let x0 = AddendMod.Gb.rawValue * widthMultiplier
       let x1 = x0 + bWidth - widthMultiplier

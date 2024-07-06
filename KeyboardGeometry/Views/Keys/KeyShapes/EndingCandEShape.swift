@@ -11,7 +11,6 @@ struct EndingCandEShape: Shape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat
-  var widthMultiplier: CGFloat
   
   func path(in rect: CGRect) -> Path {
     Path { path in

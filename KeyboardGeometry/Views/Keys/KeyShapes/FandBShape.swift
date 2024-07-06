@@ -15,11 +15,8 @@ struct FandBShape: Shape {
   
   func path(in rect: CGRect) -> Path {
     Path { path in
-//      let width = Width.whiteKeyDFB.rawValue
-//      let height = Height.whiteKey.rawValue
       let bWidth = Width.blackKey.rawValue * widthMultiplier
-      let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
-//      let radius = Radius.whiteKey.rawValue
+      let bHeight = bWidth * Constants.blackKeyHeightMultiplier
       
       path.addLines(
         [

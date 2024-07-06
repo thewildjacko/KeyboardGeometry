@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Keyboard: View {
   var geometry: GeometryProxy
-  var size: CGFloat
   var keyCount: Int?
   var initialKey: KeyType = .C
   var keyTypes: [KeyType] = []
@@ -18,9 +17,9 @@ struct Keyboard: View {
   var widthMod: CGFloat = 0
   var keyOffset: CGFloat = 0
   
-  init(geometry: GeometryProxy, size: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, octaves: Int? = 1) {
+  init(geometry: GeometryProxy, keyCount: Int? = nil, initialKey: KeyType = .C, octaves: Int? = 1) {
     self.geometry = geometry
-    self.size = size
+    
     self.initialKey = initialKey
     self.keyTypes.append(initialKey)
     self.octaves = octaves
@@ -64,11 +63,11 @@ struct Keyboard: View {
     for (index, type) in keyTypes.enumerated() {
       if index == 0 {
 //        print("widthMod: \(widthMod)")
-        keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
+        keys.append(Key(type, geometry: geometry, widthMod: widthMod, initialKey: true, keyOffset: 0))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       } else {
-        keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
+        keys.append(Key(type, geometry: geometry, widthMod: widthMod, keyOffset: keyOffset))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       }

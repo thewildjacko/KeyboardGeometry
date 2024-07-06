@@ -14,7 +14,6 @@ protocol KeyProtocol {
   var type: KeyType { get set }
   var octave: CGFloat { get set }
   var geometry: GeometryProxy { get set }
-  var size: CGFloat { get set }
   var widthMod: CGFloat { get set }
   var initialKey: Bool { get set }
   var keyOffset: CGFloat { get set }
@@ -26,7 +25,7 @@ protocol KeyProtocol {
   var fill: Color { get }
   var z_Index: Double { get }
   
-  init(type: KeyType, geometry: GeometryProxy, size: CGFloat, widthMod: CGFloat)
+  init(type: KeyType, geometry: GeometryProxy, widthMod: CGFloat)
 }
 
 extension KeyProtocol {
@@ -82,13 +81,13 @@ extension KeyProtocol {
   }
   
   var offset: CGFloat {
-    geometry.size.width.getKeyOffset(offset: keyOffset, octave: octave, widthMod: widthMod)
+    (geometry.size.width).getKeyOffset(offset: keyOffset, octave: octave, widthMod: widthMod)
   }
   
   var KeyWidthAddend: CGFloat { Width.getAddend(type) }
   
-  init(_ type: KeyType = .C, octave: CGFloat = 0, geometry: GeometryProxy, size: CGFloat, widthMod: CGFloat = 23, initialKey: Bool = false, keyOffset: CGFloat = 0) {
-    self.init(type: type, geometry: geometry, size: size, widthMod: widthMod)
+  init(_ type: KeyType = .C, octave: CGFloat = 0, geometry: GeometryProxy, widthMod: CGFloat = 23, initialKey: Bool = false, keyOffset: CGFloat = 0) {
+    self.init(type: type, geometry: geometry, widthMod: widthMod)
     
     self.octave = octave
     self.initialKey = initialKey
