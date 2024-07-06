@@ -22,6 +22,7 @@ struct Keyboard: View {
     self.geometry = geometry
     self.size = size
     self.initialKey = initialKey
+//    self.initialKey != .E ? self.keyTypes.append(initialKey) : self.keyTypes.append(.endingE)
     self.keyTypes.append(initialKey)
     self.octaves = octaves
 

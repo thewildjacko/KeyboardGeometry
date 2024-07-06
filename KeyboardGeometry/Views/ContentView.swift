@@ -13,11 +13,11 @@ struct ContentView: View {
   var body: some View {
     GeometryReader { geometry in
       VStack {
-        Keyboard(geometry: geometry, size: size, initialKey: .E, octaves: 1)
+        Keyboard(geometry: geometry, size: size, initialKey: .C, octaves: 1)
       }
     }
     .frame(width: Width.octave.rawValue * size)
-    .border(Color.black, width: 1)
+//    .border(Color.black, width: 1)
     .padding()
   }
 }
