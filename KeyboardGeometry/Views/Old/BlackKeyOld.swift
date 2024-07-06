@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BlackKeyOld: View, KeyboardKeys {
+struct BlackKeyOld: View { // , KeyboardKeys
   var geometry: GeometryProxy
   var radius: CGFloat
   var type: BKType

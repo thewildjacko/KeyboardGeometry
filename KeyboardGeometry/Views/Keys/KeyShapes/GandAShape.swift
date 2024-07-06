@@ -8,25 +8,30 @@
 import SwiftUI
 
 struct GandAShape: Shape {
+  var width: CGFloat
+  var height: CGFloat
+  var radius: CGFloat
+  var widthMultiplier: CGFloat
+  
   func path(in rect: CGRect) -> Path {
     Path { path in
-      let wWidth = Width.whiteKeyCEGA.rawValue
-      let wHeight = Height.whiteKey.rawValue
+//      let width = Width.whiteKeyCEGA.rawValue
+//      let height = Height.whiteKey.rawValue
       
-      let bWidth = Width.blackKey.rawValue
-      let bHeight = Height.blackKey.rawValue
-      let radius = Radius.whiteKey.rawValue
+      let bWidth = Width.blackKey.rawValue * widthMultiplier
+      let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
+//      let radius = Radius.whiteKey.rawValue
       
-      let x0 = AddendMod.Gb.rawValue
-      let x1 = x0 + bWidth - 1
-      let x2 = wWidth
+      let x0 = AddendMod.Gb.rawValue * widthMultiplier
+      let x1 = x0 + bWidth - widthMultiplier
+      let x2 = width
       let x3 = radius
       
       let y1 = bHeight
-      let y2 = wHeight - radius * 2
+      let y2 = height - radius * 2
       
-      let arcCenter1 = CGPoint(x: x2 - radius, y: wHeight - radius)
-      let arcCenter2 = CGPoint(x: radius, y: wHeight - radius)
+      let arcCenter1 = CGPoint(x: x2 - radius, y: height - radius)
+      let arcCenter2 = CGPoint(x: radius, y: height - radius)
       let arcAngle1 = Angle(degrees: 0)
       let arcAngle2 = Angle(degrees: 90.0)
       
@@ -49,7 +54,7 @@ struct GandAShape: Shape {
         delta: arcAngle2
       )
 
-      path.addLine(to: CGPoint(x: x3, y: wHeight))
+      path.addLine(to: CGPoint(x: x3, y: height))
 
       path.addRelativeArc(
         center: arcCenter2,

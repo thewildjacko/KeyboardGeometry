@@ -1,5 +1,5 @@
 //
-//  Keyboard.swift
+//  Keyboard2.swift
 //  KeyboardGeometry
 //
 //  Created by Jake Smolowe on 7/2/24.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct Keyboard: View {
+struct Keyboard2: View {
   var geometry: GeometryProxy
   var size: CGFloat
   var keyCount: Int?
   var initialKey: KeyType = .C
   var keyTypes: [KeyType] = []
   var octaves: Int?
-  var keys: [Key] = []
-//  var keys: [TheKey] = []
+  var keys: [TheKey] = []
   var widthMod: CGFloat = 0
   var keyOffset: CGFloat = 0
   
@@ -31,7 +30,11 @@ struct Keyboard: View {
     if let count = keyCount {
       self.keyCount = count
       if count != 0 {
-        addKeys(count: count - 1, nextKey: &nextKey)
+        if count == 1 {
+          ()
+        } else {
+          addKeys(count: count - 1, nextKey: &nextKey)
+        }
       } else {
         addKeys(count: 12, nextKey: &nextKey)
       }
@@ -61,13 +64,13 @@ struct Keyboard: View {
     for (index, type) in keyTypes.enumerated() {
       if index == 0 {
 //        print("widthMod: \(widthMod)")
-//        keys.append(TheKey(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
-        keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
+        keys.append(TheKey(type, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
+//        keys.append(Key(type, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       } else {
-//        keys.append(TheKey(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
-        keys.append(Key(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
+        keys.append(TheKey(type, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
+//        keys.append(Key(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       }
@@ -75,9 +78,17 @@ struct Keyboard: View {
   }
   
   mutating func addKeys(count: Int, nextKey: inout KeyType) {
-    for _ in 1...(count) {
-      keyTypes.append(nextKey)
-      nextKey = nextKey.nextKey
+    for i in 1...count {
+      if i == count && (nextKey == .C || nextKey == .E)  {
+        nextKey == .C ? keyTypes.append(.endingC) : keyTypes.append(.endingE)
+        nextKey = nextKey.nextKey
+      } else {
+        keyTypes.append(nextKey)
+        nextKey = nextKey.nextKey
+      }
+      
+      let keyNames = keyTypes.map { $0.rawValue }
+      print(keyNames)
     }
   }
   

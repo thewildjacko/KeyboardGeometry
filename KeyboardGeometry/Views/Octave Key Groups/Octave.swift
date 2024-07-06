@@ -31,7 +31,7 @@ struct Octave: View {
     self.keyTypes = keyTypes
     for (index, type) in keyTypes.enumerated() {
       switch type {
-      case .C, .E, .G, .A:
+      case .C, .E, .G, .A, .endingC, .endingE:
         widthMod += index == 0 ? Width.whiteKeyCEGA.rawValue : Width.getAddend(type)
       case .D, .F, .B:
         widthMod += index == 0 ? Width.whiteKeyDFB.rawValue : Width.getAddend(type)
@@ -43,11 +43,11 @@ struct Octave: View {
     for (index, type) in keyTypes.enumerated() {
       if index == 0 {
         print("widthMod: \(widthMod)")
-        keys.append(Key(type, octave: 0, octaveDivisor: 1, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
+        keys.append(Key(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, initialKey: true, keyOffset: 0))
         keyOffset += type.nextKeyOffset
         print("nextKeyOffset: \(type.nextKeyOffset)")
       } else {
-        keys.append(Key(type, octave: 0, octaveDivisor: 1, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
+        keys.append(Key(type, octave: 0, geometry: geometry, size: size, widthMod: widthMod, keyOffset: keyOffset))
         keyOffset += type.nextKeyOffset
         print("nextKeyOffset: \(type.nextKeyOffset)")
       }

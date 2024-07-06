@@ -12,6 +12,5 @@ typealias Height = Constants.Height
 typealias Radius = Constants.Radius
 typealias Offset = Constants.Offset
 typealias BKType = BlackKeyOld.BKType
-typealias KeyType = Key.KeyType
 typealias AddendMod = Width.AddendMod
 typealias Addend = (KeyType) -> CGFloat

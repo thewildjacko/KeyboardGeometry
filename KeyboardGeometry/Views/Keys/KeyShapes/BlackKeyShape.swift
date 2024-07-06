@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct BlackKeyShape: Shape {
+  var width: CGFloat
+  var height: CGFloat
+  var radius: CGFloat
+  
   func path(in rect: CGRect) -> Path {
     Path { path in
-      let rect = CGRect(x: 0, y: 0, width: 14, height: 52)
-      let cornerSize: CGFloat = 1.2
+      let rect = CGRect(x: 0, y: 0, width: width, height: height)
+//      let radius: CGFloat = 1.2
       
-      path.addRoundedRect(in: rect, cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: cornerSize, bottomTrailing: cornerSize, topTrailing: 0))
+      path.addRoundedRect(in: rect, cornerRadii: RectangleCornerRadii(topLeading: 0, bottomLeading: radius, bottomTrailing: radius, topTrailing: 0))
     }
   }
 }

@@ -25,7 +25,7 @@ enum Constants {
     
     static func getAddend(_ type: KeyType) -> CGFloat {
       switch type {
-      case .C:
+      case .C, .endingC:
         return Width.whiteKeyCEGA.rawValue
       case .Db:
         return AddendMod.Db.rawValue
@@ -33,7 +33,7 @@ enum Constants {
         return Width.whiteKeyDFB.rawValue - AddendMod.Db.rawValue
       case .Eb:
         return AddendMod.Eb.rawValue
-      case .E:
+      case .E, .endingE:
         return Width.blackKey.rawValue
       case .F:
         return Width.whiteKeyDFB.rawValue
@@ -101,6 +101,5 @@ enum Constants {
   }
   
   public static let frameModifier: CGFloat = 187
-  
 }
 

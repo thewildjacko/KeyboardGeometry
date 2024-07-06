@@ -1,5 +1,5 @@
 //
-//  CandEShape.swift
+//  EndingCShape.swift
 //  KeyboardGeometry
 //
 //  Created by Jake Smolowe on 7/5/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CandEShape: Shape {
+struct EndingCandEShape: Shape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat
@@ -15,15 +15,10 @@ struct CandEShape: Shape {
   
   func path(in rect: CGRect) -> Path {
     Path { path in
-      let bWidth = Width.blackKey.rawValue * widthMultiplier
-      let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
-      
       path.addLines(
         [
           CGPoint(x: 0, y: 0),
-          CGPoint(x: bWidth, y: 0),
-          CGPoint(x: bWidth, y: bHeight),
-          CGPoint(x: width, y: bHeight),
+          CGPoint(x: width, y: 0),
           CGPoint(x: width, y: height - radius * 2)
         ]
       )

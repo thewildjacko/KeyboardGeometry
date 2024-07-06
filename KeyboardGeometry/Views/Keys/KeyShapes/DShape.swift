@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct DShape: Shape {
+  var width: CGFloat
+  var height: CGFloat
+  var radius: CGFloat
+  var widthMultiplier: CGFloat
+
   func path(in rect: CGRect) -> Path {
     Path { path in
-      let wWidth = Width.whiteKeyDFB.rawValue
-      let DbAddend = AddendMod.Db.rawValue
-      let wHeight = Height.whiteKey.rawValue
-      let bWidth = Width.blackKey.rawValue
-      let bHeight = Height.blackKey.rawValue
-      let radius = Radius.whiteKey.rawValue
+//      let width = Width.whiteKeyDFB.rawValue
+//      let height = Height.whiteKey.rawValue
+      let DbAddend = AddendMod.Db.rawValue * widthMultiplier
+      let bWidth = Width.blackKey.rawValue * widthMultiplier
+      let bHeight = bWidth *  Height.blackKey.rawValue/Width.blackKey.rawValue
+//      let radius = Radius.whiteKey.rawValue
       
       path.move(to: CGPoint(x: DbAddend, y: 0))
       
@@ -25,21 +30,21 @@ struct DShape: Shape {
           CGPoint(x: DbAddend + bWidth, y: 0),
           CGPoint(x: DbAddend + bWidth, y: bHeight),
           CGPoint(x: DbAddend * 2 + bWidth, y: bHeight),
-          CGPoint(x: DbAddend * 2 + bWidth, y: wHeight - radius * 2)
+          CGPoint(x: DbAddend * 2 + bWidth, y: height - radius * 2)
         ]
       )
 
       path.addRelativeArc(
-        center: CGPoint(x: wWidth - radius, y: wHeight - radius),
+        center: CGPoint(x: width - radius, y: height - radius),
         radius: radius,
         startAngle: Angle(degrees: 0),
         delta: Angle(degrees: 90.0)
       )
 
-      path.addLine(to: CGPoint(x: radius, y: wHeight))
+      path.addLine(to: CGPoint(x: radius, y: height))
       
       path.addRelativeArc(
-        center: CGPoint(x: radius, y: wHeight - radius),
+        center: CGPoint(x: radius, y: height - radius),
         radius: radius,
         startAngle: Angle(degrees: 90),
         delta: Angle(degrees: 90.0)

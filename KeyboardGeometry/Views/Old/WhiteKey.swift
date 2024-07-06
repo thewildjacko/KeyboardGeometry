@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WhiteKey: View, KeyboardKeys {
+struct WhiteKey: View { // , KeyboardKeys 
   var geometry: GeometryProxy
   var radius: CGFloat
   var type: WKType
