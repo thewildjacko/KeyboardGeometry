@@ -96,6 +96,6 @@ struct Keyboard: View {
         key
       }
     }
-    .position(x: 0, y: geometry.size.height/2)
+//    .position(x: 0, y: geometry.size.height/2)
   }
 }
