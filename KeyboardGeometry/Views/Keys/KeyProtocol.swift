@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol KeyboardKeys {
+protocol KeyProtocol {
   var id: UUID { get set }
   
   var type: KeyType { get set }
@@ -29,7 +29,7 @@ protocol KeyboardKeys {
   init(type: KeyType, geometry: GeometryProxy, size: CGFloat, widthMod: CGFloat)
 }
 
-extension KeyboardKeys {
+extension KeyProtocol {
   var widthMultiplier: CGFloat { geometry.size.width / widthMod }
   
   var radius: CGFloat {

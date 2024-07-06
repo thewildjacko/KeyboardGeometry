@@ -78,26 +78,6 @@ enum Constants {
     case B = 140
     case octave = 164
     
-    
-    enum BlackKey: CGFloat {
-      case Db = 14
-      case Eb = 42
-      case Gb = 83
-      case Ab = 110
-      case Bb = 137
-      case octave = -23
-    }
-    
-    enum WhiteKey: CGFloat {
-      case C = 0
-      case D = 23
-      case E = 47
-      case F = 70
-      case G = 94
-      case A = 117
-      case B = 140
-    }
-    
   }
   
   public static let frameModifier: CGFloat = 187

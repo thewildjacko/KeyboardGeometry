@@ -11,39 +11,20 @@
 		1D6080892C34B2A60048B8C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6080882C34B2A60048B8C4 /* ContentView.swift */; };
 		1D60808B2C34B2A70048B8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D60808A2C34B2A70048B8C4 /* Assets.xcassets */; };
 		1D60808E2C34B2A70048B8C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D60808D2C34B2A70048B8C4 /* Preview Assets.xcassets */; };
-		1D7A7B432C385EB600A8807C /* BlackKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B422C385EB600A8807C /* BlackKey.swift */; };
-		1D7A7B452C38636B00A8807C /* CKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B442C38636B00A8807C /* CKey.swift */; };
-		1D7A7B472C386A5B00A8807C /* DKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B462C386A5B00A8807C /* DKey.swift */; };
-		1D7A7B492C38970F00A8807C /* EKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B482C38970F00A8807C /* EKey.swift */; };
-		1D7A7B4B2C38985900A8807C /* FKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B4A2C38985900A8807C /* FKey.swift */; };
-		1D7A7B4E2C389A2700A8807C /* BKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B4D2C389A2700A8807C /* BKey.swift */; };
-		1D7A7B502C389AB000A8807C /* GKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B4F2C389AB000A8807C /* GKey.swift */; };
-		1D7A7B522C38A15E00A8807C /* AKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B512C38A15E00A8807C /* AKey.swift */; };
 		1D7A7B542C38A23600A8807C /* BlackKeyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B532C38A23600A8807C /* BlackKeyShape.swift */; };
 		1D7A7B572C38A28600A8807C /* CandEShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B562C38A28600A8807C /* CandEShape.swift */; };
 		1D7A7B592C38A2D800A8807C /* DShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B582C38A2D800A8807C /* DShape.swift */; };
 		1D7A7B5B2C38A32400A8807C /* FandBShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B5A2C38A32400A8807C /* FandBShape.swift */; };
 		1D7A7B5D2C38A35000A8807C /* GandAShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B5C2C38A35000A8807C /* GandAShape.swift */; };
 		1D7A7B5F2C38C1B200A8807C /* KeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B5E2C38C1B200A8807C /* KeyType.swift */; };
-		1D7A7B612C38C40B00A8807C /* TheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B602C38C40B00A8807C /* TheKey.swift */; };
-		1D7A7B632C38CA5B00A8807C /* Keyboard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B622C38CA5B00A8807C /* Keyboard2.swift */; };
+		1D7A7B612C38C40B00A8807C /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B602C38C40B00A8807C /* Key.swift */; };
+		1D7A7B632C38CA5B00A8807C /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B622C38CA5B00A8807C /* Keyboard.swift */; };
 		1D7A7B662C38E61400A8807C /* EndingCandEShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B652C38E61400A8807C /* EndingCandEShape.swift */; };
-		1D9BB4062C3512B6001346AE /* BlackKeyOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4052C3512B6001346AE /* BlackKeyOld.swift */; };
-		1D9BB4082C3512D6001346AE /* BlackKeyOctave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4072C3512D6001346AE /* BlackKeyOctave.swift */; };
-		1D9BB40A2C351304001346AE /* FirstOctave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4092C351304001346AE /* FirstOctave.swift */; };
-		1D9BB40C2C351323001346AE /* AdditionalOctave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB40B2C351323001346AE /* AdditionalOctave.swift */; };
-		1D9BB40E2C35134F001346AE /* FirstOctaveWhiteKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB40D2C35134F001346AE /* FirstOctaveWhiteKeys.swift */; };
-		1D9BB4102C351363001346AE /* AdditionalOctaveWhiteKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB40F2C351363001346AE /* AdditionalOctaveWhiteKeys.swift */; };
 		1D9BB4122C3513B9001346AE /* Custom Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4112C3513B9001346AE /* Custom Extensions.swift */; };
-		1D9BB4172C3517A5001346AE /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4162C3517A5001346AE /* Keyboard.swift */; };
-		1D9BB4192C351862001346AE /* KeyboardKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4182C351862001346AE /* KeyboardKeys.swift */; };
+		1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4182C351862001346AE /* KeyProtocol.swift */; };
 		1D9BB41B2C35197F001346AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB41A2C35197F001346AE /* Constants.swift */; };
 		1D9BB41F2C35A8C9001346AE /* clavier5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1D9BB41E2C35A8C9001346AE /* clavier5.gif */; };
-		1D9BB4212C35B0BD001346AE /* KeyRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4202C35B0BD001346AE /* KeyRect.swift */; };
 		1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4222C35B66A001346AE /* TypeAliases.swift */; };
-		1D9BB4252C35BF57001346AE /* Octave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4242C35BF57001346AE /* Octave.swift */; };
-		1D9BB4272C35D24D001346AE /* WhiteKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4262C35D24D001346AE /* WhiteKey.swift */; };
-		1D9BB4292C35F2E0001346AE /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4282C35F2E0001346AE /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,39 +33,20 @@
 		1D6080882C34B2A60048B8C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D60808A2C34B2A70048B8C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D60808D2C34B2A70048B8C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1D7A7B422C385EB600A8807C /* BlackKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKey.swift; sourceTree = "<group>"; };
-		1D7A7B442C38636B00A8807C /* CKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKey.swift; sourceTree = "<group>"; };
-		1D7A7B462C386A5B00A8807C /* DKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKey.swift; sourceTree = "<group>"; };
-		1D7A7B482C38970F00A8807C /* EKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKey.swift; sourceTree = "<group>"; };
-		1D7A7B4A2C38985900A8807C /* FKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FKey.swift; sourceTree = "<group>"; };
-		1D7A7B4D2C389A2700A8807C /* BKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKey.swift; sourceTree = "<group>"; };
-		1D7A7B4F2C389AB000A8807C /* GKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKey.swift; sourceTree = "<group>"; };
-		1D7A7B512C38A15E00A8807C /* AKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKey.swift; sourceTree = "<group>"; };
 		1D7A7B532C38A23600A8807C /* BlackKeyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyShape.swift; sourceTree = "<group>"; };
 		1D7A7B562C38A28600A8807C /* CandEShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandEShape.swift; sourceTree = "<group>"; };
 		1D7A7B582C38A2D800A8807C /* DShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DShape.swift; sourceTree = "<group>"; };
 		1D7A7B5A2C38A32400A8807C /* FandBShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FandBShape.swift; sourceTree = "<group>"; };
 		1D7A7B5C2C38A35000A8807C /* GandAShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GandAShape.swift; sourceTree = "<group>"; };
 		1D7A7B5E2C38C1B200A8807C /* KeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyType.swift; sourceTree = "<group>"; };
-		1D7A7B602C38C40B00A8807C /* TheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheKey.swift; sourceTree = "<group>"; };
-		1D7A7B622C38CA5B00A8807C /* Keyboard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard2.swift; sourceTree = "<group>"; };
+		1D7A7B602C38C40B00A8807C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		1D7A7B622C38CA5B00A8807C /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		1D7A7B652C38E61400A8807C /* EndingCandEShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingCandEShape.swift; sourceTree = "<group>"; };
-		1D9BB4052C3512B6001346AE /* BlackKeyOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyOld.swift; sourceTree = "<group>"; };
-		1D9BB4072C3512D6001346AE /* BlackKeyOctave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyOctave.swift; sourceTree = "<group>"; };
-		1D9BB4092C351304001346AE /* FirstOctave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOctave.swift; sourceTree = "<group>"; };
-		1D9BB40B2C351323001346AE /* AdditionalOctave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalOctave.swift; sourceTree = "<group>"; };
-		1D9BB40D2C35134F001346AE /* FirstOctaveWhiteKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOctaveWhiteKeys.swift; sourceTree = "<group>"; };
-		1D9BB40F2C351363001346AE /* AdditionalOctaveWhiteKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalOctaveWhiteKeys.swift; sourceTree = "<group>"; };
 		1D9BB4112C3513B9001346AE /* Custom Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Extensions.swift"; sourceTree = "<group>"; };
-		1D9BB4162C3517A5001346AE /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		1D9BB4182C351862001346AE /* KeyboardKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardKeys.swift; sourceTree = "<group>"; };
+		1D9BB4182C351862001346AE /* KeyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProtocol.swift; sourceTree = "<group>"; };
 		1D9BB41A2C35197F001346AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D9BB41E2C35A8C9001346AE /* clavier5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = clavier5.gif; sourceTree = "<group>"; };
-		1D9BB4202C35B0BD001346AE /* KeyRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyRect.swift; sourceTree = "<group>"; };
 		1D9BB4222C35B66A001346AE /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
-		1D9BB4242C35BF57001346AE /* Octave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Octave.swift; sourceTree = "<group>"; };
-		1D9BB4262C35D24D001346AE /* WhiteKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteKey.swift; sourceTree = "<group>"; };
-		1D9BB4282C35F2E0001346AE /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,19 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D0C011A2C37021B002273A9 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				1D9BB4152C351784001346AE /* Combined Octaves */,
-				1D9BB40D2C35134F001346AE /* FirstOctaveWhiteKeys.swift */,
-				1D9BB40F2C351363001346AE /* AdditionalOctaveWhiteKeys.swift */,
-				1D9BB4072C3512D6001346AE /* BlackKeyOctave.swift */,
-				1D9BB4262C35D24D001346AE /* WhiteKey.swift */,
-				1D9BB4052C3512B6001346AE /* BlackKeyOld.swift */,
-			);
-			path = Old;
-			sourceTree = "<group>";
-		};
 		1D60807A2C34B2A60048B8C4 = {
 			isa = PBXGroup;
 			children = (
@@ -167,11 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				1D6080882C34B2A60048B8C4 /* ContentView.swift */,
-				1D9BB4162C3517A5001346AE /* Keyboard.swift */,
-				1D7A7B622C38CA5B00A8807C /* Keyboard2.swift */,
+				1D7A7B622C38CA5B00A8807C /* Keyboard.swift */,
 				1D9BB4132C35173F001346AE /* Keys */,
-				1D9BB4142C351757001346AE /* Octave Key Groups */,
-				1D0C011A2C37021B002273A9 /* Old */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,39 +125,12 @@
 		1D9BB4132C35173F001346AE /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				1D9BB4182C351862001346AE /* KeyboardKeys.swift */,
+				1D9BB4182C351862001346AE /* KeyProtocol.swift */,
 				1D7A7B5E2C38C1B200A8807C /* KeyType.swift */,
-				1D9BB4282C35F2E0001346AE /* Key.swift */,
-				1D9BB4202C35B0BD001346AE /* KeyRect.swift */,
-				1D7A7B442C38636B00A8807C /* CKey.swift */,
-				1D7A7B602C38C40B00A8807C /* TheKey.swift */,
-				1D7A7B462C386A5B00A8807C /* DKey.swift */,
-				1D7A7B482C38970F00A8807C /* EKey.swift */,
-				1D7A7B4A2C38985900A8807C /* FKey.swift */,
-				1D7A7B4F2C389AB000A8807C /* GKey.swift */,
-				1D7A7B512C38A15E00A8807C /* AKey.swift */,
-				1D7A7B4D2C389A2700A8807C /* BKey.swift */,
-				1D7A7B422C385EB600A8807C /* BlackKey.swift */,
+				1D7A7B602C38C40B00A8807C /* Key.swift */,
 				1D7A7B4C2C3899EC00A8807C /* KeyShapes */,
 			);
 			path = Keys;
-			sourceTree = "<group>";
-		};
-		1D9BB4142C351757001346AE /* Octave Key Groups */ = {
-			isa = PBXGroup;
-			children = (
-				1D9BB4242C35BF57001346AE /* Octave.swift */,
-			);
-			path = "Octave Key Groups";
-			sourceTree = "<group>";
-		};
-		1D9BB4152C351784001346AE /* Combined Octaves */ = {
-			isa = PBXGroup;
-			children = (
-				1D9BB4092C351304001346AE /* FirstOctave.swift */,
-				1D9BB40B2C351323001346AE /* AdditionalOctave.swift */,
-			);
-			path = "Combined Octaves";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,39 +205,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */,
-				1D9BB4062C3512B6001346AE /* BlackKeyOld.swift in Sources */,
-				1D7A7B472C386A5B00A8807C /* DKey.swift in Sources */,
 				1D7A7B572C38A28600A8807C /* CandEShape.swift in Sources */,
-				1D7A7B452C38636B00A8807C /* CKey.swift in Sources */,
-				1D9BB40E2C35134F001346AE /* FirstOctaveWhiteKeys.swift in Sources */,
-				1D9BB4192C351862001346AE /* KeyboardKeys.swift in Sources */,
-				1D9BB4082C3512D6001346AE /* BlackKeyOctave.swift in Sources */,
-				1D9BB40C2C351323001346AE /* AdditionalOctave.swift in Sources */,
-				1D9BB4252C35BF57001346AE /* Octave.swift in Sources */,
-				1D9BB4102C351363001346AE /* AdditionalOctaveWhiteKeys.swift in Sources */,
-				1D9BB4292C35F2E0001346AE /* Key.swift in Sources */,
+				1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */,
 				1D7A7B5B2C38A32400A8807C /* FandBShape.swift in Sources */,
 				1D6080892C34B2A60048B8C4 /* ContentView.swift in Sources */,
-				1D7A7B4B2C38985900A8807C /* FKey.swift in Sources */,
-				1D7A7B522C38A15E00A8807C /* AKey.swift in Sources */,
-				1D7A7B632C38CA5B00A8807C /* Keyboard2.swift in Sources */,
-				1D7A7B502C389AB000A8807C /* GKey.swift in Sources */,
-				1D7A7B612C38C40B00A8807C /* TheKey.swift in Sources */,
-				1D7A7B492C38970F00A8807C /* EKey.swift in Sources */,
-				1D9BB4272C35D24D001346AE /* WhiteKey.swift in Sources */,
+				1D7A7B632C38CA5B00A8807C /* Keyboard.swift in Sources */,
+				1D7A7B612C38C40B00A8807C /* Key.swift in Sources */,
 				1D6080872C34B2A60048B8C4 /* KeyboardGeometryApp.swift in Sources */,
 				1D9BB4122C3513B9001346AE /* Custom Extensions.swift in Sources */,
 				1D7A7B5D2C38A35000A8807C /* GandAShape.swift in Sources */,
 				1D7A7B592C38A2D800A8807C /* DShape.swift in Sources */,
 				1D7A7B542C38A23600A8807C /* BlackKeyShape.swift in Sources */,
-				1D9BB4212C35B0BD001346AE /* KeyRect.swift in Sources */,
 				1D9BB41B2C35197F001346AE /* Constants.swift in Sources */,
-				1D7A7B4E2C389A2700A8807C /* BKey.swift in Sources */,
 				1D7A7B5F2C38C1B200A8807C /* KeyType.swift in Sources */,
 				1D7A7B662C38E61400A8807C /* EndingCandEShape.swift in Sources */,
-				1D9BB4172C3517A5001346AE /* Keyboard.swift in Sources */,
-				1D9BB40A2C351304001346AE /* FirstOctave.swift in Sources */,
-				1D7A7B432C385EB600A8807C /* BlackKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
