@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DShape: Shape {
+struct DShape: Shape, KeyShape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat

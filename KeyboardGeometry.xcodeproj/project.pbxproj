@@ -21,10 +21,20 @@
 		1D7A7B632C38CA5B00A8807C /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B622C38CA5B00A8807C /* Keyboard.swift */; };
 		1D7A7B662C38E61400A8807C /* EndingCandEShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B652C38E61400A8807C /* EndingCandEShape.swift */; };
 		1D7A7B682C39124D00A8807C /* SizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B672C39124D00A8807C /* SizeCalculator.swift */; };
+		1D9712EC2C3B116500BC2BA4 /* KeyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9712EB2C3B116500BC2BA4 /* KeyShape.swift */; };
+		1D9712EF2C3B249E00BC2BA4 /* CShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9712EE2C3B249E00BC2BA4 /* CShapeGroup.swift */; };
+		1D9712F12C3B286C00BC2BA4 /* DShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9712F02C3B286C00BC2BA4 /* DShapeGroup.swift */; };
 		1D9BB4122C3513B9001346AE /* Custom Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4112C3513B9001346AE /* Custom Extensions.swift */; };
 		1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4182C351862001346AE /* KeyProtocol.swift */; };
 		1D9BB41B2C35197F001346AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB41A2C35197F001346AE /* Constants.swift */; };
 		1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4222C35B66A001346AE /* TypeAliases.swift */; };
+		1DE1C72C2C3B295E008D6135 /* EShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */; };
+		1DE1C72F2C3B2ACC008D6135 /* FShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */; };
+		1DE1C7312C3B2B88008D6135 /* BShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */; };
+		1DE1C7332C3B2C64008D6135 /* GShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7322C3B2C64008D6135 /* GShapeGroup.swift */; };
+		1DE1C7352C3B2CD1008D6135 /* AShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */; };
+		1DE1C7372C3B2D32008D6135 /* BlackKeyShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */; };
+		1DE1C73A2C3B2DF4008D6135 /* EndingCandEShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,10 +53,20 @@
 		1D7A7B622C38CA5B00A8807C /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		1D7A7B652C38E61400A8807C /* EndingCandEShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingCandEShape.swift; sourceTree = "<group>"; };
 		1D7A7B672C39124D00A8807C /* SizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCalculator.swift; sourceTree = "<group>"; };
+		1D9712EB2C3B116500BC2BA4 /* KeyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyShape.swift; sourceTree = "<group>"; };
+		1D9712EE2C3B249E00BC2BA4 /* CShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CShapeGroup.swift; sourceTree = "<group>"; };
+		1D9712F02C3B286C00BC2BA4 /* DShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DShapeGroup.swift; sourceTree = "<group>"; };
 		1D9BB4112C3513B9001346AE /* Custom Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Extensions.swift"; sourceTree = "<group>"; };
 		1D9BB4182C351862001346AE /* KeyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProtocol.swift; sourceTree = "<group>"; };
 		1D9BB41A2C35197F001346AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D9BB4222C35B66A001346AE /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C7322C3B2C64008D6135 /* GShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EndingCandEShapeGroup.swift; path = KeyboardGeometry/Views/Keys/KeyShapeGroups/EndingCandEShapeGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,7 @@
 		1D60807A2C34B2A60048B8C4 = {
 			isa = PBXGroup;
 			children = (
+				1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */,
 				1D6080852C34B2A60048B8C4 /* KeyboardGeometry */,
 				1D6080842C34B2A60048B8C4 /* Products */,
 			);
@@ -102,14 +123,30 @@
 		1D7A7B4C2C3899EC00A8807C /* KeyShapes */ = {
 			isa = PBXGroup;
 			children = (
-				1D7A7B532C38A23600A8807C /* BlackKeyShape.swift */,
+				1D9712EB2C3B116500BC2BA4 /* KeyShape.swift */,
 				1D7A7B562C38A28600A8807C /* CandEShape.swift */,
 				1D7A7B582C38A2D800A8807C /* DShape.swift */,
 				1D7A7B5A2C38A32400A8807C /* FandBShape.swift */,
 				1D7A7B5C2C38A35000A8807C /* GandAShape.swift */,
 				1D7A7B652C38E61400A8807C /* EndingCandEShape.swift */,
+				1D7A7B532C38A23600A8807C /* BlackKeyShape.swift */,
 			);
 			path = KeyShapes;
+			sourceTree = "<group>";
+		};
+		1D9712ED2C3B247900BC2BA4 /* KeyShapeGroups */ = {
+			isa = PBXGroup;
+			children = (
+				1D9712EE2C3B249E00BC2BA4 /* CShapeGroup.swift */,
+				1DE1C7322C3B2C64008D6135 /* GShapeGroup.swift */,
+				1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */,
+				1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */,
+				1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */,
+				1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */,
+				1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */,
+				1D9712F02C3B286C00BC2BA4 /* DShapeGroup.swift */,
+			);
+			path = KeyShapeGroups;
 			sourceTree = "<group>";
 		};
 		1D9BB4002C351234001346AE /* Views */ = {
@@ -128,6 +165,7 @@
 				1D9BB4182C351862001346AE /* KeyProtocol.swift */,
 				1D7A7B5E2C38C1B200A8807C /* KeyType.swift */,
 				1D7A7B602C38C40B00A8807C /* Key.swift */,
+				1D9712ED2C3B247900BC2BA4 /* KeyShapeGroups */,
 				1D7A7B4C2C3899EC00A8807C /* KeyShapes */,
 			);
 			path = Keys;
@@ -203,18 +241,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE1C72F2C3B2ACC008D6135 /* FShapeGroup.swift in Sources */,
 				1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */,
 				1D7A7B572C38A28600A8807C /* CandEShape.swift in Sources */,
 				1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */,
+				1DE1C7332C3B2C64008D6135 /* GShapeGroup.swift in Sources */,
 				1D7A7B5B2C38A32400A8807C /* FandBShape.swift in Sources */,
 				1D7A7B682C39124D00A8807C /* SizeCalculator.swift in Sources */,
 				1D6080892C34B2A60048B8C4 /* ContentView.swift in Sources */,
+				1D9712EC2C3B116500BC2BA4 /* KeyShape.swift in Sources */,
 				1D7A7B632C38CA5B00A8807C /* Keyboard.swift in Sources */,
 				1D7A7B612C38C40B00A8807C /* Key.swift in Sources */,
+				1DE1C7312C3B2B88008D6135 /* BShapeGroup.swift in Sources */,
+				1D9712F12C3B286C00BC2BA4 /* DShapeGroup.swift in Sources */,
+				1D9712EF2C3B249E00BC2BA4 /* CShapeGroup.swift in Sources */,
+				1DE1C73A2C3B2DF4008D6135 /* EndingCandEShapeGroup.swift in Sources */,
+				1DE1C72C2C3B295E008D6135 /* EShapeGroup.swift in Sources */,
+				1DE1C7372C3B2D32008D6135 /* BlackKeyShapeGroup.swift in Sources */,
 				1D6080872C34B2A60048B8C4 /* KeyboardGeometryApp.swift in Sources */,
 				1D9BB4122C3513B9001346AE /* Custom Extensions.swift in Sources */,
 				1D7A7B5D2C38A35000A8807C /* GandAShape.swift in Sources */,
 				1D7A7B592C38A2D800A8807C /* DShape.swift in Sources */,
+				1DE1C7352C3B2CD1008D6135 /* AShapeGroup.swift in Sources */,
 				1D7A7B542C38A23600A8807C /* BlackKeyShape.swift in Sources */,
 				1D9BB41B2C35197F001346AE /* Constants.swift in Sources */,
 				1D7A7B5F2C38C1B200A8807C /* KeyType.swift in Sources */,

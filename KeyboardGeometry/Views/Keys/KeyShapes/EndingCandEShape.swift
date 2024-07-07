@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct EndingCandEShape: Shape {
+struct EndingCandEShape: Shape, KeyShape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat
+  var widthMultiplier: CGFloat
   
   func path(in rect: CGRect) -> Path {
     Path { path in

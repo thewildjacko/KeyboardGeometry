@@ -23,6 +23,7 @@ protocol KeyProtocol {
   var width: CGFloat { get }
   var height: CGFloat { get }
   var fill: Color { get }
+  var lineWidth: CGFloat { get set }
   var z_Index: Double { get }
   
   init(type: KeyType, geometry: GeometryProxy, widthMod: CGFloat)

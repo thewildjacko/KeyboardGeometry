@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GandAShape: Shape {
+struct GandAShape: Shape, KeyShape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat

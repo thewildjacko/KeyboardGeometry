@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FandBShape: Shape {
+struct FandBShape: Shape, KeyShape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat

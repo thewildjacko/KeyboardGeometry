@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CandEShape: Shape {
+struct CandEShape: Shape, KeyShape {
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat
