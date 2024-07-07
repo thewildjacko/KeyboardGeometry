@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol KeyShape {
+protocol KeyShape: Shape {
   var width: CGFloat  { get set }
   var height: CGFloat  { get set }
   var radius: CGFloat  { get set }
@@ -20,7 +20,6 @@ protocol KeyShapeGroup {
   var height: CGFloat { get set }
   var radius: CGFloat { get set }
   var widthMultiplier: CGFloat { get set }
-  var keyShape: KeyShape { get set }
   var fill: Color { get set }
   var stroke: Color { get set }
   var lineWidth: CGFloat { get set }

@@ -13,7 +13,6 @@ struct FShapeGroup: View, KeyShapeGroup {
   var radius: CGFloat
   var widthMultiplier: CGFloat
   var offset: CGFloat
-  var keyShape: KeyShape
   var fill: Color
   var stroke: Color
   var lineWidth: CGFloat
@@ -42,5 +41,5 @@ struct FShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  FShapeGroup(width: 24, height: 96, radius: 2.5, widthMultiplier: 1, offset: 0, keyShape: FandBShape(width: 24, height: 96, radius: 2.5, widthMultiplier: 1), fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
+  FShapeGroup(width: 24, height: 96, radius: 2.5, widthMultiplier: 1, offset: 0, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
 }

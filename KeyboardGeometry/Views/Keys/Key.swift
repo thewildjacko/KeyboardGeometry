@@ -17,180 +17,49 @@ struct Key: View, KeyProtocol, Identifiable {
   var initialKey: Bool = false
   var keyOffset: CGFloat = 0
   var lineWidth: CGFloat = 1
+  var stroke: Color = .black
+  var fill: Color
   
   var body: some View {
-    ZStack {
-      switch type {
-      case .C:
-        CandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        
-        CandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-      case .D:
-        DShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        
-        DShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-      case .E:
-        CandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        .rotation3DEffect(
-          .degrees(180),
-          axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
-        CandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-        .rotation3DEffect(
-          .degrees(180),
-          axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
-
-      case .F:
-        FandBShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        
-        FandBShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-      case .G:
-        GandAShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        
-        GandAShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-      case .A:
-        GandAShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        .rotation3DEffect(
-          .degrees(180),
-          axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
-        
-        GandAShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-        .rotation3DEffect(
-          .degrees(180),
-          axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
-      case .B:
-        FandBShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        .rotation3DEffect(
-          .degrees(180),
-          axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
-        
-        FandBShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-        .rotation3DEffect(
-          .degrees(180),
-          axis: (x: 0.0, y: 1.0, z: 0.0)
-        )
-      case .Db, .Eb, .Gb, .Ab, .Bb:
-        BlackKeyShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        
-        BlackKeyShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-      case .endingC, .endingE:
-        EndingCandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .fill(fill)
-        
-        EndingCandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier).path(
-          in: CGRect(
-            x: 0, y: 0,
-            width: width, height: height
-          ))
-        .stroke(.black, lineWidth: lineWidth)
-      }
+    switch type {
+    case .C:
+      CShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+    case .D:
+      DShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      
+    case .E:
+      EShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      
+    case .F:
+      FShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+    case .G:
+      GShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+    case .A:
+      AShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+    case .B:
+      BShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+    case .Db, .Eb, .Gb, .Ab, .Bb:
+      BlackKeyShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+    case .endingC, .endingE:
+      EndingCandEShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, offset: offset, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     }
-    .frame(width: width, height: height)
-    .zIndex(z_Index)
-    .offset(x: offset)
   }
 }
 
 extension Key {
-  init(type: KeyType = .C, geometry: GeometryProxy, widthMod: CGFloat) {
+  init(type: KeyType = .C, geometry: GeometryProxy, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat) {
     self.type = type
     self.geometry = geometry
-    
     self.widthMod = widthMod
+    self.fill = fill
+    self.stroke = stroke
+    self.lineWidth = lineWidth
   }
 }
 
 #Preview {
   GeometryReader { geometry in
-    Key(type: .C, geometry: geometry, widthMod: 23)
+    Key(type: .C, geometry: geometry, widthMod: 23, fill: .white)
   }
   .frame(width: 23 * 4, height: 96 * 4)
   .border(.black)

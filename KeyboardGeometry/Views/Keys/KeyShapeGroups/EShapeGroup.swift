@@ -13,7 +13,6 @@ struct EShapeGroup: View, KeyShapeGroup {
   var radius: CGFloat
   var widthMultiplier: CGFloat
   var offset: CGFloat
-  var keyShape: KeyShape
   var fill: Color
   var stroke: Color
   var lineWidth: CGFloat
@@ -46,5 +45,5 @@ struct EShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  EShapeGroup(width: 23, height: 96, radius: 2.5, widthMultiplier: 1, offset: 0, keyShape: CandEShape(width: 23, height: 96, radius: 2.5, widthMultiplier: 1), fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
+  EShapeGroup(width: 23, height: 96, radius: 2.5, widthMultiplier: 1, offset: 0, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
 }

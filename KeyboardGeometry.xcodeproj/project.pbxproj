@@ -66,7 +66,7 @@
 		1DE1C7322C3B2C64008D6135 /* GShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyShapeGroup.swift; sourceTree = "<group>"; };
-		1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EndingCandEShapeGroup.swift; path = KeyboardGeometry/Views/Keys/KeyShapeGroups/EndingCandEShapeGroup.swift; sourceTree = "<group>"; };
+		1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingCandEShapeGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,6 @@
 		1D60807A2C34B2A60048B8C4 = {
 			isa = PBXGroup;
 			children = (
-				1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */,
 				1D6080852C34B2A60048B8C4 /* KeyboardGeometry */,
 				1D6080842C34B2A60048B8C4 /* Products */,
 			);
@@ -138,13 +137,14 @@
 			isa = PBXGroup;
 			children = (
 				1D9712EE2C3B249E00BC2BA4 /* CShapeGroup.swift */,
+				1D9712F02C3B286C00BC2BA4 /* DShapeGroup.swift */,
+				1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */,
+				1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */,
 				1DE1C7322C3B2C64008D6135 /* GShapeGroup.swift */,
 				1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */,
-				1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */,
-				1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */,
 				1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */,
-				1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */,
-				1D9712F02C3B286C00BC2BA4 /* DShapeGroup.swift */,
+				1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */,
+				1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */,
 			);
 			path = KeyShapeGroups;
 			sourceTree = "<group>";

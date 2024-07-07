@@ -22,11 +22,12 @@ protocol KeyProtocol {
   var radius: CGFloat { get }
   var width: CGFloat { get }
   var height: CGFloat { get }
-  var fill: Color { get }
+  var fill: Color { get set }
+  var stroke: Color { get set }
   var lineWidth: CGFloat { get set }
   var z_Index: Double { get }
   
-  init(type: KeyType, geometry: GeometryProxy, widthMod: CGFloat)
+  init(type: KeyType, geometry: GeometryProxy, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat)
 }
 
 extension KeyProtocol {
@@ -87,8 +88,8 @@ extension KeyProtocol {
   
   var KeyWidthAddend: CGFloat { Width.getAddend(type) }
   
-  init(_ type: KeyType = .C, octave: CGFloat = 0, geometry: GeometryProxy, widthMod: CGFloat = 23, initialKey: Bool = false, keyOffset: CGFloat = 0) {
-    self.init(type: type, geometry: geometry, widthMod: widthMod)
+  init(_ type: KeyType = .C, octave: CGFloat = 0, geometry: GeometryProxy, widthMod: CGFloat = 23, fill: Color, stroke: Color = .black, lineWidth: CGFloat = 1, initialKey: Bool = false, keyOffset: CGFloat = 0) {
+    self.init(type: type, geometry: geometry, widthMod: widthMod, fill: fill, stroke: stroke, lineWidth: lineWidth)
     
     self.octave = octave
     self.initialKey = initialKey

@@ -63,11 +63,11 @@ struct Keyboard: View {
     for (index, type) in keyTypes.enumerated() {
       if index == 0 {
 //        print("widthMod: \(widthMod)")
-        keys.append(Key(type, geometry: geometry, widthMod: widthMod, initialKey: true, keyOffset: 0))
+        keys.append(Key(type, geometry: geometry, widthMod: widthMod, fill: setFill(type: type), initialKey: true, keyOffset: 0))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       } else {
-        keys.append(Key(type, geometry: geometry, widthMod: widthMod, keyOffset: keyOffset))
+        keys.append(Key(type, geometry: geometry, widthMod: widthMod, fill: setFill(type: type), keyOffset: keyOffset))
         keyOffset += type.nextKeyOffset
 //        print("nextKeyOffset: \(type.nextKeyOffset)")
       }
@@ -86,6 +86,15 @@ struct Keyboard: View {
       
 //      let keyNames = keyTypes.map { $0.rawValue }
 //      print(keyNames)
+    }
+  }
+  
+  mutating func setFill(type: KeyType) -> Color {
+    switch type {
+    case .C, .D, .E, .F, .G, .A, .B, .endingC, .endingE:
+      return .white
+    case .Db, .Eb, .Gb, .Ab, .Bb:
+      return .black
     }
   }
   
