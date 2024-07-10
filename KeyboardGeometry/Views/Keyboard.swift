@@ -11,6 +11,7 @@ struct Keyboard: View {
   @State var fWidth: CGFloat = 351
   @State var height: CGFloat = 0
   @State var geoWidth: CGFloat
+  var title: String
   var keyCount: Int?
   var initialKey: KeyType = .C
   var keyTypes: [KeyType] = []
@@ -20,7 +21,8 @@ struct Keyboard: View {
   var keyPosition: CGFloat = 0
   var widthMultiplier: CGFloat = 0
   
-  init(geoWidth: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, octaves: Int? = 1) {
+  init(title: String, geoWidth: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, octaves: Int? = 1) {
+    self.title = title
     self.geoWidth = geoWidth
     
     self.initialKey = initialKey
@@ -122,13 +124,16 @@ struct Keyboard: View {
   }
   
   mutating func resize(geoWidth: CGFloat) -> Keyboard{
-    return Keyboard(geoWidth: geoWidth, keyCount: keyCount, initialKey: initialKey, octaves: octaves)
+    return Keyboard(title: title, geoWidth: geoWidth, keyCount: keyCount, initialKey: initialKey, octaves: octaves)
   }
   
   var body: some View {
     ZStack(alignment: .topLeading) {
       VStack(alignment: .center) {
-        Text("Title")
+        Text(title)
+          .font(.title)
+          .fontWeight(.heavy)
+          .foregroundStyle(.white)
         ZStack {
           ForEach(keys) { key in
             key

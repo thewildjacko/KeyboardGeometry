@@ -14,21 +14,23 @@ protocol RotatableView: View {
 struct ContentView: View {
   @State var portrait: Bool = true
   @State var geoSize: CGSize = .zero
-  @State var kb1: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 1)
-  @State var kb2: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 1)
-  @State var kb3: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 3)
+  @State var kb1: Keyboard = Keyboard(title: "Base Chord", geoWidth: 351, initialKey: .C, octaves: 1)
+  @State var kb2: Keyboard = Keyboard(title: "UST", geoWidth: 351, initialKey: .C, octaves: 1)
+  @State var kb3: Keyboard = Keyboard(title: "Combined Chord", geoWidth: 351, initialKey: .C, octaves: 3)
   
   var body: some View {
     GeometryReader { geo in
       VStack(alignment: .center) {
         Spacer()
         Spacer()
+        Spacer()
+        Spacer()
         HStack(spacing: 0) {
           VStack {
-            Text("Base Chord")
-              .font(.title)
-              .fontWeight(.heavy)
-              .foregroundStyle(.white)
+//            Text("Base Chord")
+//              .font(.title)
+//              .fontWeight(.heavy)
+//              .foregroundStyle(.white)
             kb1
           }
           .padding()
@@ -36,10 +38,10 @@ struct ContentView: View {
           .border(Color.black, width: 1)
           
           VStack {
-            Text("UST")
-              .font(.title)
-              .fontWeight(.heavy)
-              .foregroundStyle(.white)
+//            Text("UST")
+//              .font(.title)
+//              .fontWeight(.heavy)
+//              .foregroundStyle(.white)
             kb2
           }
           .padding()
@@ -49,10 +51,10 @@ struct ContentView: View {
         Spacer()
         HStack {
           VStack {
-            Text("Combined Chord")
-              .font(.title)
-              .fontWeight(.heavy)
-              .foregroundStyle(.white)
+//            Text("Combined Chord")
+//              .font(.title)
+//              .fontWeight(.heavy)
+//              .foregroundStyle(.white)
             kb3
           }
           .padding()

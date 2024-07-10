@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LandscapeView: View, RotatableView {
   var geoWidth: CGFloat
-  @State var kb1: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 1)
-  @State var kb2: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 1)
-  @State var kb3: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 3)
+  @State var kb1: Keyboard = Keyboard(title: "", geoWidth: 351, initialKey: .C, octaves: 1)
+  @State var kb2: Keyboard = Keyboard(title: "", geoWidth: 351, initialKey: .C, octaves: 1)
+  @State var kb3: Keyboard = Keyboard(title: "", geoWidth: 351, initialKey: .C, octaves: 3)
   
   var body: some View {
     VStack(alignment: .center, spacing: 5) {
@@ -62,5 +62,5 @@ struct LandscapeView: View, RotatableView {
 }
 
 #Preview {
-  LandscapeView(geoWidth: 351 * 2, kb1: Keyboard(geoWidth: 351 * 2), kb2: Keyboard(geoWidth: 351), kb3: Keyboard(geoWidth: 187, octaves: 3))
+  LandscapeView(geoWidth: 351 * 2, kb1: Keyboard(title: "", geoWidth: 351 * 2), kb2: Keyboard(title: "", geoWidth: 351), kb3: Keyboard(title: "", geoWidth: 187, octaves: 3))
 }

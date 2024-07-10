@@ -10,9 +10,9 @@ import SwiftUI
 struct LandscapeTestView: View {
   @State var screenSize: CGSize = .zero
   @State var size1: CGFloat = .zero
-  @State var kb1: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 1)
-  @State var kb2: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 1)
-  @State var kb3: Keyboard = Keyboard(geoWidth: 351, initialKey: .C, octaves: 3)
+  @State var kb1: Keyboard = Keyboard(title: "", geoWidth: 351, initialKey: .C, octaves: 1)
+  @State var kb2: Keyboard = Keyboard(title: "", geoWidth: 351, initialKey: .C, octaves: 1)
+  @State var kb3: Keyboard = Keyboard(title: "", geoWidth: 351, initialKey: .C, octaves: 3)
 
   var body: some View {
     GeometryReader { geo in
