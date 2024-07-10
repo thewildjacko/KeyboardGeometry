@@ -11,7 +11,7 @@ import SwiftUI
 struct KeyboardGeometryApp: App {
     var body: some Scene {
         WindowGroup {
-            KBPreviewView()
+            ContentView()
         }
     }
 }

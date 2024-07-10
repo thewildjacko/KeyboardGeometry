@@ -127,10 +127,16 @@ struct Keyboard: View {
   
   var body: some View {
     ZStack(alignment: .topLeading) {
-      ForEach(keys) { key in
-        key
+      VStack(alignment: .center) {
+        Text("Title")
+        ZStack {
+          ForEach(keys) { key in
+            key
+          }
+        }
+        .frame(width: geoWidth, height: height)
+        .position(x: geoWidth/2)
       }
     }
-    .frame(width: geoWidth, height: height)
   }
 }

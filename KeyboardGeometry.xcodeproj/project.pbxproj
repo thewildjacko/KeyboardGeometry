@@ -11,6 +11,9 @@
 		1D6080892C34B2A60048B8C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6080882C34B2A60048B8C4 /* ContentView.swift */; };
 		1D60808B2C34B2A70048B8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D60808A2C34B2A70048B8C4 /* Assets.xcassets */; };
 		1D60808E2C34B2A70048B8C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D60808D2C34B2A70048B8C4 /* Preview Assets.xcassets */; };
+		1D75A6DE2C3EFB630088D111 /* LandscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D75A6DD2C3EFB630088D111 /* LandscapeView.swift */; };
+		1D75A6E02C3EFC950088D111 /* PortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D75A6DF2C3EFC950088D111 /* PortraitView.swift */; };
+		1D75A6E22C3EFDA50088D111 /* DeviceRotationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D75A6E12C3EFDA40088D111 /* DeviceRotationViewModifier.swift */; };
 		1D7A7B542C38A23600A8807C /* BlackKeyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B532C38A23600A8807C /* BlackKeyShape.swift */; };
 		1D7A7B572C38A28600A8807C /* CandEShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B562C38A28600A8807C /* CandEShape.swift */; };
 		1D7A7B592C38A2D800A8807C /* DShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A7B582C38A2D800A8807C /* DShape.swift */; };
@@ -28,7 +31,7 @@
 		1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4182C351862001346AE /* KeyProtocol.swift */; };
 		1D9BB41B2C35197F001346AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB41A2C35197F001346AE /* Constants.swift */; };
 		1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4222C35B66A001346AE /* TypeAliases.swift */; };
-		1DDCB9F42C3CF11F00DBCDD9 /* KBPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCB9F32C3CF11F00DBCDD9 /* KBPreviewView.swift */; };
+		1DDCB9F42C3CF11F00DBCDD9 /* LandscapeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCB9F32C3CF11F00DBCDD9 /* LandscapeTestView.swift */; };
 		1DE1C72C2C3B295E008D6135 /* EShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */; };
 		1DE1C72F2C3B2ACC008D6135 /* FShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */; };
 		1DE1C7312C3B2B88008D6135 /* BShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */; };
@@ -45,6 +48,9 @@
 		1D6080882C34B2A60048B8C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1D60808A2C34B2A70048B8C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D60808D2C34B2A70048B8C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1D75A6DD2C3EFB630088D111 /* LandscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeView.swift; sourceTree = "<group>"; };
+		1D75A6DF2C3EFC950088D111 /* PortraitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitView.swift; sourceTree = "<group>"; };
+		1D75A6E12C3EFDA40088D111 /* DeviceRotationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewModifier.swift; sourceTree = "<group>"; };
 		1D7A7B532C38A23600A8807C /* BlackKeyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyShape.swift; sourceTree = "<group>"; };
 		1D7A7B562C38A28600A8807C /* CandEShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandEShape.swift; sourceTree = "<group>"; };
 		1D7A7B582C38A2D800A8807C /* DShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DShape.swift; sourceTree = "<group>"; };
@@ -62,7 +68,7 @@
 		1D9BB4182C351862001346AE /* KeyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProtocol.swift; sourceTree = "<group>"; };
 		1D9BB41A2C35197F001346AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D9BB4222C35B66A001346AE /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
-		1DDCB9F32C3CF11F00DBCDD9 /* KBPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBPreviewView.swift; sourceTree = "<group>"; };
+		1DDCB9F32C3CF11F00DBCDD9 /* LandscapeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeTestView.swift; sourceTree = "<group>"; };
 		1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BShapeGroup.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				1D9BB41A2C35197F001346AE /* Constants.swift */,
 				1D9BB4222C35B66A001346AE /* TypeAliases.swift */,
 				1D9BB4112C3513B9001346AE /* Custom Extensions.swift */,
+				1D75A6E12C3EFDA40088D111 /* DeviceRotationViewModifier.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,7 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				1D6080882C34B2A60048B8C4 /* ContentView.swift */,
-				1DDCB9F32C3CF11F00DBCDD9 /* KBPreviewView.swift */,
+				1DDCB9F32C3CF11F00DBCDD9 /* LandscapeTestView.swift */,
+				1D75A6DD2C3EFB630088D111 /* LandscapeView.swift */,
+				1D75A6DF2C3EFC950088D111 /* PortraitView.swift */,
 				1D7A7B622C38CA5B00A8807C /* Keyboard.swift */,
 				1D9BB4132C35173F001346AE /* Keys */,
 				1D7A7B672C39124D00A8807C /* SizeCalculator.swift */,
@@ -266,8 +275,10 @@
 				1DE1C72F2C3B2ACC008D6135 /* FShapeGroup.swift in Sources */,
 				1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */,
 				1D7A7B572C38A28600A8807C /* CandEShape.swift in Sources */,
+				1D75A6E22C3EFDA50088D111 /* DeviceRotationViewModifier.swift in Sources */,
+				1D75A6E02C3EFC950088D111 /* PortraitView.swift in Sources */,
 				1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */,
-				1DDCB9F42C3CF11F00DBCDD9 /* KBPreviewView.swift in Sources */,
+				1DDCB9F42C3CF11F00DBCDD9 /* LandscapeTestView.swift in Sources */,
 				1DE783422C3D979D00AA0FE8 /* KeyShapeGroup.swift in Sources */,
 				1DE1C7332C3B2C64008D6135 /* GShapeGroup.swift in Sources */,
 				1D7A7B5B2C38A32400A8807C /* FandBShape.swift in Sources */,
@@ -276,6 +287,7 @@
 				1D9712EC2C3B116500BC2BA4 /* KeyShape.swift in Sources */,
 				1D7A7B632C38CA5B00A8807C /* Keyboard.swift in Sources */,
 				1D7A7B612C38C40B00A8807C /* Key.swift in Sources */,
+				1D75A6DE2C3EFB630088D111 /* LandscapeView.swift in Sources */,
 				1DE1C7312C3B2B88008D6135 /* BShapeGroup.swift in Sources */,
 				1D9712F12C3B286C00BC2BA4 /* DShapeGroup.swift in Sources */,
 				1D9712EF2C3B249E00BC2BA4 /* CShapeGroup.swift in Sources */,
