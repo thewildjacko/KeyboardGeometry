@@ -28,6 +28,7 @@
 		1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4182C351862001346AE /* KeyProtocol.swift */; };
 		1D9BB41B2C35197F001346AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB41A2C35197F001346AE /* Constants.swift */; };
 		1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9BB4222C35B66A001346AE /* TypeAliases.swift */; };
+		1DDCB9F42C3CF11F00DBCDD9 /* KBPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCB9F32C3CF11F00DBCDD9 /* KBPreviewView.swift */; };
 		1DE1C72C2C3B295E008D6135 /* EShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */; };
 		1DE1C72F2C3B2ACC008D6135 /* FShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */; };
 		1DE1C7312C3B2B88008D6135 /* BShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */; };
@@ -35,6 +36,7 @@
 		1DE1C7352C3B2CD1008D6135 /* AShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */; };
 		1DE1C7372C3B2D32008D6135 /* BlackKeyShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */; };
 		1DE1C73A2C3B2DF4008D6135 /* EndingCandEShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */; };
+		1DE783422C3D979D00AA0FE8 /* KeyShapeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE783412C3D979D00AA0FE8 /* KeyShapeGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,7 @@
 		1D9BB4182C351862001346AE /* KeyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProtocol.swift; sourceTree = "<group>"; };
 		1D9BB41A2C35197F001346AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D9BB4222C35B66A001346AE /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		1DDCB9F32C3CF11F00DBCDD9 /* KBPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBPreviewView.swift; sourceTree = "<group>"; };
 		1DE1C72B2C3B295E008D6135 /* EShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C72E2C3B2ACC008D6135 /* FShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C7302C3B2B88008D6135 /* BShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BShapeGroup.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		1DE1C7342C3B2CD1008D6135 /* AShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C7362C3B2D32008D6135 /* BlackKeyShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackKeyShapeGroup.swift; sourceTree = "<group>"; };
 		1DE1C7392C3B2DF4008D6135 /* EndingCandEShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingCandEShapeGroup.swift; sourceTree = "<group>"; };
+		1DE783412C3D979D00AA0FE8 /* KeyShapeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyShapeGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D47F6732C3DC5EA0006E83D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D7A7B5E2C38C1B200A8807C /* KeyType.swift */,
+				1D9BB41A2C35197F001346AE /* Constants.swift */,
+				1D9BB4222C35B66A001346AE /* TypeAliases.swift */,
+				1D9BB4112C3513B9001346AE /* Custom Extensions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1D60807A2C34B2A60048B8C4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +116,7 @@
 			children = (
 				1D6080862C34B2A60048B8C4 /* KeyboardGeometryApp.swift */,
 				1D9BB4002C351234001346AE /* Views */,
-				1D9BB41A2C35197F001346AE /* Constants.swift */,
-				1D9BB4222C35B66A001346AE /* TypeAliases.swift */,
-				1D9BB4112C3513B9001346AE /* Custom Extensions.swift */,
-				1D7A7B672C39124D00A8807C /* SizeCalculator.swift */,
+				1D47F6732C3DC5EA0006E83D /* Models */,
 				1D60808A2C34B2A70048B8C4 /* Assets.xcassets */,
 				1D60808C2C34B2A70048B8C4 /* Preview Content */,
 			);
@@ -122,7 +134,6 @@
 		1D7A7B4C2C3899EC00A8807C /* KeyShapes */ = {
 			isa = PBXGroup;
 			children = (
-				1D9712EB2C3B116500BC2BA4 /* KeyShape.swift */,
 				1D7A7B562C38A28600A8807C /* CandEShape.swift */,
 				1D7A7B582C38A2D800A8807C /* DShape.swift */,
 				1D7A7B5A2C38A32400A8807C /* FandBShape.swift */,
@@ -153,8 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				1D6080882C34B2A60048B8C4 /* ContentView.swift */,
+				1DDCB9F32C3CF11F00DBCDD9 /* KBPreviewView.swift */,
 				1D7A7B622C38CA5B00A8807C /* Keyboard.swift */,
 				1D9BB4132C35173F001346AE /* Keys */,
+				1D7A7B672C39124D00A8807C /* SizeCalculator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,13 +175,22 @@
 		1D9BB4132C35173F001346AE /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				1D9BB4182C351862001346AE /* KeyProtocol.swift */,
-				1D7A7B5E2C38C1B200A8807C /* KeyType.swift */,
 				1D7A7B602C38C40B00A8807C /* Key.swift */,
+				1DE783402C3D977200AA0FE8 /* Key Protocols */,
 				1D9712ED2C3B247900BC2BA4 /* KeyShapeGroups */,
 				1D7A7B4C2C3899EC00A8807C /* KeyShapes */,
 			);
 			path = Keys;
+			sourceTree = "<group>";
+		};
+		1DE783402C3D977200AA0FE8 /* Key Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1D9BB4182C351862001346AE /* KeyProtocol.swift */,
+				1D9712EB2C3B116500BC2BA4 /* KeyShape.swift */,
+				1DE783412C3D979D00AA0FE8 /* KeyShapeGroup.swift */,
+			);
+			path = "Key Protocols";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +267,8 @@
 				1D9BB4232C35B66A001346AE /* TypeAliases.swift in Sources */,
 				1D7A7B572C38A28600A8807C /* CandEShape.swift in Sources */,
 				1D9BB4192C351862001346AE /* KeyProtocol.swift in Sources */,
+				1DDCB9F42C3CF11F00DBCDD9 /* KBPreviewView.swift in Sources */,
+				1DE783422C3D979D00AA0FE8 /* KeyShapeGroup.swift in Sources */,
 				1DE1C7332C3B2C64008D6135 /* GShapeGroup.swift in Sources */,
 				1D7A7B5B2C38A32400A8807C /* FandBShape.swift in Sources */,
 				1D7A7B682C39124D00A8807C /* SizeCalculator.swift in Sources */,

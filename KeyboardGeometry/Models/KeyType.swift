@@ -11,34 +11,45 @@ enum KeyType: String {
   case C, D, E, F, G, A, B, endingC, endingE
   case Db, Eb, Gb, Ab, Bb
   
-  var nextKeyOffset: CGFloat {
+  var initialKeyPosition: CGFloat {
+    switch self {
+    case .C, .E, .G, .A, .endingC, .endingE:
+      return 11.5
+    case .D, .F, .B:
+      return 12
+    case .Db, .Eb, .Gb, .Ab, .Bb:
+      return 7
+    }
+  }
+  
+  var nextKeyPosition: CGFloat {
     switch self {
     case .C:
-      return 14
+      return 9.5
     case .Db:
-      return 9
+      return 13.5
     case .D:
-      return 19
+      return 14.5
     case .Eb:
-      return 5
+      return 9.5
     case .E:
       return 23
     case .F:
-      return 13
+      return 9.5
     case .Gb:
-      return 11
+      return 14.5
     case .G:
-      return 16
+      return 11.5
     case .Ab:
-      return 7
+      return 11.5
     case .A:
-      return 20
+      return 15.5
     case .Bb:
-      return 3
+      return 7.5
     case .B:
       return 24
     case .endingC, .endingE:
-      return 23
+      return 9.5
     }
   }
   

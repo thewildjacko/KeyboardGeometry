@@ -10,7 +10,7 @@ import Foundation
 typealias Width = Constants.Width
 typealias Height = Constants.Height
 typealias Radius = Constants.Radius
-typealias Offset = Constants.Offset
+typealias Position = Constants.Position
 typealias AddendMod = Width.AddendMod
 typealias Addend = (KeyType) -> CGFloat
 typealias ArcAngle = Constants.ArcAngle

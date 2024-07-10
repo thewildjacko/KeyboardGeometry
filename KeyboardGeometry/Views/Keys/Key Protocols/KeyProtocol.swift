@@ -13,10 +13,10 @@ protocol KeyProtocol {
   
   var type: KeyType { get set }
   var octave: CGFloat { get set }
-  var geometry: GeometryProxy { get set }
+  var geoWidth: CGFloat { get set }
   var widthMod: CGFloat { get set }
   var initialKey: Bool { get set }
-  var keyOffset: CGFloat { get set }
+  var keyPosition: CGFloat { get set }
   
   var widthMultiplier: CGFloat { get }
   var radius: CGFloat { get }
@@ -27,11 +27,11 @@ protocol KeyProtocol {
   var lineWidth: CGFloat { get set }
   var z_Index: Double { get }
   
-  init(type: KeyType, geometry: GeometryProxy, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat)
+  init(type: KeyType, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat)
 }
 
 extension KeyProtocol {
-  var widthMultiplier: CGFloat { geometry.size.width / widthMod }
+  var widthMultiplier: CGFloat { geoWidth / widthMod }
   
   var radius: CGFloat {
     switch type {
@@ -55,12 +55,10 @@ extension KeyProtocol {
   
   var height: CGFloat {
     switch type {
-    case .C, .E, .G, .A, .endingC, .endingE:
-      return width * Height.whiteKey.rawValue/Width.whiteKeyCEGA.rawValue
-    case .D, .F, .B:
-      return width * Height.whiteKey.rawValue/Width.whiteKeyDFB.rawValue
+    case .C, .D, .E, .F, .G, .A, .B, .endingC, .endingE:
+      return widthMultiplier * Height.whiteKey.rawValue
     case .Db, .Eb, .Gb, .Ab, .Bb:
-      return width * Height.blackKey.rawValue/Width.blackKey.rawValue
+      return widthMultiplier * Height.blackKey.rawValue
     }
   }
   
@@ -82,17 +80,17 @@ extension KeyProtocol {
     }
   }
   
-  var offset: CGFloat {
-    (geometry.size.width).getKeyOffset(offset: keyOffset, octave: octave, widthMod: widthMod)
+  var position: CGFloat {
+    geoWidth.getKeyPosition(position: keyPosition, widthMod: widthMod)
   }
   
   var KeyWidthAddend: CGFloat { Width.getAddend(type) }
   
-  init(_ type: KeyType = .C, octave: CGFloat = 0, geometry: GeometryProxy, widthMod: CGFloat = 23, fill: Color, stroke: Color = .black, lineWidth: CGFloat = 1, initialKey: Bool = false, keyOffset: CGFloat = 0) {
-    self.init(type: type, geometry: geometry, widthMod: widthMod, fill: fill, stroke: stroke, lineWidth: lineWidth)
+  init(_ type: KeyType = .C, octave: CGFloat = 0, geoWidth: CGFloat, widthMod: CGFloat = 23, fill: Color, stroke: Color = .black, lineWidth: CGFloat = 1, initialKey: Bool = false, keyPosition: CGFloat = 0) {
+    self.init(type: type, geoWidth: geoWidth, widthMod: widthMod, fill: fill, stroke: stroke, lineWidth: lineWidth)
     
     self.octave = octave
     self.initialKey = initialKey
-    self.keyOffset = keyOffset
+    self.keyPosition = keyPosition
   }
 }

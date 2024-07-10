@@ -78,7 +78,7 @@ enum Constants {
     }
   }
   
-  enum Offset: CGFloat {
+  enum Position: CGFloat {
     case C = 0
     case Db = 14
     case D = 23
@@ -97,5 +97,8 @@ enum Constants {
   
   public static let frameModifier: CGFloat = 187
   public static let blackKeyHeightMultiplier = Height.blackKey.rawValue/Width.blackKey.rawValue
+  public static let whiteKeyCEGAHeightMultiplier = Height.whiteKey.rawValue/Width.whiteKeyCEGA.rawValue
+  public static let whiteKeyDFBHeightMultiplier = Height.whiteKey.rawValue/Width.whiteKeyDFB.rawValue
+  public static let blackToWhiteHeightRatio = Height.blackKey.rawValue/Height.whiteKey.rawValue
 }
 
