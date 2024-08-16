@@ -23,13 +23,13 @@ struct ContentView: View {
       VStack(alignment: .center) {
         HStack(spacing: 0) {
           VStack {
-            Spacer(minLength: geo.size.height * 0.2)
+            Spacer(minLength: geo.size.height * 0.3)
             kb1
           }
           .padding()
           
           VStack {
-            Spacer(minLength: geo.size.height * 0.2)
+            Spacer(minLength: geo.size.height * 0.3)
             kb2
           }
           .padding()
