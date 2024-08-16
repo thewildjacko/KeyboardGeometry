@@ -18,7 +18,6 @@ struct CShapeGroup: View, KeyShapeGroup {
   var radius: CGFloat
   var widthMultiplier: CGFloat
   
-  
   var position: CGFloat
   var fill: Color
   var stroke: Color
@@ -43,5 +42,5 @@ struct CShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  CShapeGroup(initialKey: true, width: 23, height: 96, radius: 2.5, widthMultiplier: 1, position: 0, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
+  CShapeGroup(initialKey: true, width: 23, height: 96, radius: 2.5, widthMultiplier: 1, position: 200, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
 }

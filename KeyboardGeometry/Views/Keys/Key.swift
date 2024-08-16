@@ -9,9 +9,9 @@ import SwiftUI
 
 struct Key: View, KeyProtocol, Identifiable {
   var id: UUID = UUID()
-  
+  var keyboardKeyID: String
   var type: KeyType
-  var octave: CGFloat = 0
+  var octaveInKeyboard: CGFloat = 0
   var geoWidth: CGFloat
   var widthMod: CGFloat
   var initialKey: Bool = false
@@ -37,10 +37,8 @@ struct Key: View, KeyProtocol, Identifiable {
       CShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .D:
       DShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
-      
     case .E:
       EShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
-      
     case .F:
       FShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .G:
@@ -58,7 +56,8 @@ struct Key: View, KeyProtocol, Identifiable {
 }
 
 extension Key {
-  init(type: KeyType = .C, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat) {
+  init(keyboardKeyID: String, type: KeyType = .C, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat) {
+    self.keyboardKeyID = keyboardKeyID
     self.type = type
     self.geoWidth = geoWidth
     self.widthMod = widthMod
@@ -70,8 +69,10 @@ extension Key {
 
 #Preview {
   GeometryReader { geometry in
-    Key(type: .C, geoWidth: geometry.size.width, widthMod: 23, fill: .white)
+    Key(keyboardKeyID: "0", type: .C, geoWidth: geometry.size.width, widthMod: 23, fill: .white)
   }
+    .position(x: 92, y: 192)
   .frame(width: 23 * 4, height: 96 * 4)
+
   .border(.black)
 }

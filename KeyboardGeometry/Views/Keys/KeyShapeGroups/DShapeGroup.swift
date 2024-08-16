@@ -13,7 +13,6 @@ struct DShapeGroup: View, KeyShapeGroup {
   var keyShape: DShape { DShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
   }
 
-  
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat
@@ -41,5 +40,5 @@ struct DShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  DShapeGroup(width: 24, height: 96, radius: 2.5, widthMultiplier: 1, position: 0, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
+  DShapeGroup(width: 24, height: 96, radius: 2.5, widthMultiplier: 1, position: 200, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
 }

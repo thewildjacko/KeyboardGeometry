@@ -40,5 +40,5 @@ struct BlackKeyShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  BlackKeyShapeGroup(width: 14, height: 52, radius: 1.2, widthMultiplier: 1, position: 0, fill: .black, stroke: .black, lineWidth: 1, z_Index: 1)
+  BlackKeyShapeGroup(width: 14, height: 52, radius: 1.2, widthMultiplier: 1, position: 200, fill: .black, stroke: .black, lineWidth: 1, z_Index: 1)
 }

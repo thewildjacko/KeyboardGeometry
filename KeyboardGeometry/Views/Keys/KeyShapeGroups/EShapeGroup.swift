@@ -45,5 +45,5 @@ struct EShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  EShapeGroup(width: 23, height: 96, radius: 2.5, widthMultiplier: 1, position: 0, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
+  EShapeGroup(width: 23, height: 96, radius: 2.5, widthMultiplier: 1, position: 200, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
 }
