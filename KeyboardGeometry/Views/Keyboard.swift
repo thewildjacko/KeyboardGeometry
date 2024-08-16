@@ -28,8 +28,9 @@ struct Keyboard: View, Identifiable {
   var widthMultiplier: CGFloat = 0
   
   //  MARK: initializers
-  init(title: String, geoWidth: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, startingOctave: Int = 3, octaves: Int? = 1) {
+  init(title: String, geoWidth: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, startingOctave: Int = 3, octaves: Int? = nil) {
     self.title = title
+    self.keyCount = keyCount
     self.geoWidth = geoWidth
     self.startingOctave = startingOctave
     self.initialKey = initialKey
@@ -147,7 +148,7 @@ struct Keyboard: View, Identifiable {
     print("height: \(key.height)")
   }
   
-  mutating func resize(geoWidth: CGFloat) -> Keyboard{
+  mutating func resize(geoWidth: CGFloat) -> Keyboard {
     return Keyboard(title: title, geoWidth: geoWidth, keyCount: keyCount, initialKey: initialKey, startingOctave: startingOctave, octaves: octaves)
   }
   

@@ -16,7 +16,7 @@ struct ContentView: View {
   @State var geoSize: CGSize = .zero
   @State var kb1: Keyboard = Keyboard(title: "Base Chord", geoWidth: 351, initialKey: .C, startingOctave: 4, octaves: 1)
   @State var kb2: Keyboard = Keyboard(title: "UST", geoWidth: 351, initialKey: .C, startingOctave: 4, octaves: 1)
-  @State var kb3: Keyboard = Keyboard(title: "Combined Chord", geoWidth: 351, initialKey: .C, startingOctave: 4, octaves: 3)
+  @State var kb3: Keyboard = Keyboard(title: "Combined Chord", geoWidth: 351, keyCount: 36, initialKey: .F, startingOctave: 3)
   
   var body: some View {
     GeometryReader { geo in
