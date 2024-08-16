@@ -153,38 +153,17 @@ struct Keyboard: View, Identifiable {
   
   mutating func highlightKeys(degs: [Int], degs2: [Int]? = nil, color: Color, color2: Color? = nil) {
     if degs2 == nil {
-      for deg in degs {
-        if let index = keys.firstIndex(where: { $0.pitch == deg }) {
-          keys[index].fill = color
-        }
-      }
+      degs.highlightIfSelected(keys: &keys, color: color)
     } else if color2 == nil {
-      for deg in degs {
-        if let index = keys.firstIndex(where: { $0.pitch == deg }) {
-          keys[index].fill = color
-        }
-      }
+      degs.highlightIfSelected(keys: &keys, color: color)
       
       if let degs2 = degs2 {
-        for deg in degs2 {
-          if let index = keys.firstIndex(where: { $0.pitch == deg }) {
-            keys[index].fill = color
-          }
-        }
+        degs2.highlightIfSelected(keys: &keys, color: color)
       }
     } else {
       if let degs2 = degs2, let color2 = color2 {
-        for deg in degs {
-          if let index = keys.firstIndex(where: { $0.pitch == deg }) {
-            keys[index].fill = color
-          }
-        }
-        
-        for deg in degs2 {
-          if let index = keys.firstIndex(where: { $0.pitch == deg }) {
-            keys[index].fill = color2
-          }
-        }
+        degs.highlightIfSelected(keys: &keys, color: color)
+        degs2.highlightIfSelected(keys: &keys, color: color2)
       }
     }
   }

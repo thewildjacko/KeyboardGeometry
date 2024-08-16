@@ -35,3 +35,13 @@ extension Int: Mathable {
     return type.pitchNumber + (startingOctave + 1) * 12
   }
 }
+
+extension Array where Element == Int {
+  func highlightIfSelected(keys: inout [Key], color: Color) {
+    for deg in self {
+      if let index = keys.firstIndex(where: { $0.pitch == deg }) {
+        keys[index].fill = color
+      }
+    }
+  }
+}
