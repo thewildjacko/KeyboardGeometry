@@ -7,9 +7,8 @@
 
 import Foundation
 
-enum KeyType: String {
-  case C, D, E, F, G, A, B, endingC, endingE
-  case Db, Eb, Gb, Ab, Bb
+enum KeyType: Int {
+  case C = 0, Db, D, Eb, E, F, Gb, G, Ab, A, Bb, B, endingC, endingE = 16
   
   var initialKeyPosition: CGFloat {
     switch self {
@@ -80,6 +79,18 @@ enum KeyType: String {
     case .B:
       return .C
     }
-    
+  }
+  
+  var pitchNumber: Int {
+    switch self {
+    case .endingC, .endingE:
+      return self.rawValue - 12
+    default:
+      return self.rawValue
+    }
+  }
+  
+  func toPitch(startingOctave: Int) -> Int {
+    self.pitchNumber + (startingOctave + 1) * 12
   }
 }

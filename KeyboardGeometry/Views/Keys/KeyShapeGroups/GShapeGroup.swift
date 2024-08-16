@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct GShapeGroup: View, KeyShapeGroup {
-  var initialKey: Bool = false
   typealias NoteShape = GandAShape
-  var keyShape: GandAShape { GandAShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
+  var keyShape: NoteShape { GandAShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
   }
 
   var width: CGFloat

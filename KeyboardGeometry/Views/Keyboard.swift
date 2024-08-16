@@ -7,12 +7,8 @@
 
 import SwiftUI
 
-enum KeyboardID {
-  case one, two, three
-}
-
 struct Keyboard: View, Identifiable {
-  var id: KeyboardID
+  var id: UUID = UUID()
   //  MARK: @State properties
   @State var fWidth: CGFloat = 351
   @State var height: CGFloat = 0
@@ -23,6 +19,7 @@ struct Keyboard: View, Identifiable {
   
   var keyCount: Int?
   var initialKey: KeyType = .C
+  var startingOctave: Int = 4
   var keyTypes: [KeyType] = []
   var octaves: Int?
   var keys: [Key] = []
@@ -31,11 +28,10 @@ struct Keyboard: View, Identifiable {
   var widthMultiplier: CGFloat = 0
   
   //  MARK: initializers
-  init(id: KeyboardID = .one, title: String, geoWidth: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, octaves: Int? = 1) {
-    self.id = id
+  init(title: String, geoWidth: CGFloat, keyCount: Int? = nil, initialKey: KeyType = .C, startingOctave: Int = 3, octaves: Int? = 1) {
     self.title = title
     self.geoWidth = geoWidth
-    
+    self.startingOctave = startingOctave
     self.initialKey = initialKey
     self.keyTypes.append(initialKey)
     self.octaves = octaves
@@ -111,11 +107,13 @@ struct Keyboard: View, Identifiable {
   }
   
   mutating func addKeys() {
+    var pitch = 0
     for (index, type) in keyTypes.enumerated() {
       if index == 0 {
+        pitch = type.toPitch(startingOctave: startingOctave)
         keys.append(
           Key(
-            keyboardKeyID: "\(id)_\(index)",
+            pitch: pitch,
             type,
             geoWidth: geoWidth,
             widthMod: widthMod,
@@ -125,12 +123,12 @@ struct Keyboard: View, Identifiable {
             keyPosition: type.initialKeyPosition)
         )
         keyPosition += type.initialKeyPosition + type.nextKeyPosition
+        pitch += 1
       } else {
         keys.append(
           Key(
-            keyboardKeyID: "\(id)_\(index)",
+            pitch: pitch,
             type,
-            octaveInKeyboard: index <= 11 ? 0 : 1,
             geoWidth: geoWidth,
             widthMod: widthMod,
             fill: setFill(type: type),
@@ -138,6 +136,7 @@ struct Keyboard: View, Identifiable {
             keyPosition: keyPosition)
         )
         keyPosition += type.nextKeyPosition
+        pitch += 1
       }
     }
   }
@@ -149,14 +148,14 @@ struct Keyboard: View, Identifiable {
   }
   
   mutating func resize(geoWidth: CGFloat) -> Keyboard{
-    return Keyboard(id: id, title: title, geoWidth: geoWidth, keyCount: keyCount, initialKey: initialKey, octaves: octaves)
+    return Keyboard(title: title, geoWidth: geoWidth, keyCount: keyCount, initialKey: initialKey, startingOctave: startingOctave, octaves: octaves)
   }
   
   mutating func highlightKeys() {
-    let degs = [0, 4, 7]
+    let degs = [60, 64, 67]
     
     for deg in degs {
-      if let index = keys.firstIndex(where: { $0.keyboardKeyID == "\(id)_\(deg)" }) {
+      if let index = keys.firstIndex(where: { $0.pitch == deg /*$0.keyboardKeyID == "\(id)_\(deg)"*/ }) {
         keys[index].fill = .red
       }
     }
@@ -184,7 +183,7 @@ struct Keyboard: View, Identifiable {
 
 #Preview {
   VStack {
-    Keyboard(title: "Combined Chord", geoWidth: 351, initialKey: .C, octaves: 3)
+    Keyboard(title: "Combined Chord", geoWidth: 351, initialKey: .C, startingOctave: 3, octaves: 3)
       .position(x: 220, y: 600)
   }
 }

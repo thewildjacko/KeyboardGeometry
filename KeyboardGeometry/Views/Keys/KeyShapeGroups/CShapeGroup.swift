@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct CShapeGroup: View, KeyShapeGroup {
-  var initialKey: Bool
   typealias NoteShape = CandEShape
-  var keyShape: CandEShape { CandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
+  var keyShape: NoteShape { CandEShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
   }
   
   var width: CGFloat
   var height: CGFloat
   var radius: CGFloat
   var widthMultiplier: CGFloat
-  
   var position: CGFloat
   var fill: Color
   var stroke: Color
@@ -30,7 +28,6 @@ struct CShapeGroup: View, KeyShapeGroup {
         in: keyRect)
       .fill(fill)
       
-      
       keyShape.path(
         in: keyRect)
       .stroke(stroke, lineWidth: lineWidth)
@@ -42,5 +39,5 @@ struct CShapeGroup: View, KeyShapeGroup {
 }
 
 #Preview {
-  CShapeGroup(initialKey: true, width: 23, height: 96, radius: 2.5, widthMultiplier: 1, position: 200, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
+  CShapeGroup(width: 23, height: 96, radius: 2.5, widthMultiplier: 1, position: 200, fill: .white, stroke: .black, lineWidth: 1, z_Index: 0)
 }

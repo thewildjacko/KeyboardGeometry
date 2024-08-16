@@ -10,7 +10,6 @@ import SwiftUI
 
 protocol KeyShapeGroup {
   associatedtype NoteShape where NoteShape: Shape
-  var initialKey: Bool { get set }
   var keyShape: NoteShape { get }
   var keyRect: CGRect { get }
   var width: CGFloat { get set }

@@ -9,9 +9,8 @@ import SwiftUI
 
 struct Key: View, KeyProtocol, Identifiable {
   var id: UUID = UUID()
-  var keyboardKeyID: String
+  var pitch: Int = 0
   var type: KeyType
-  var octaveInKeyboard: CGFloat = 0
   var geoWidth: CGFloat
   var widthMod: CGFloat
   var initialKey: Bool = false
@@ -34,30 +33,30 @@ struct Key: View, KeyProtocol, Identifiable {
   var body: some View {
     switch type {
     case .C:
-      CShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      CShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .D:
-      DShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      DShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .E:
-      EShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      EShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .F:
-      FShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      FShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .G:
-      GShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      GShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .A:
-      AShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      AShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .B:
-      BShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      BShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .Db, .Eb, .Gb, .Ab, .Bb:
-      BlackKeyShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      BlackKeyShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     case .endingC, .endingE:
-      EndingCandEShapeGroup(initialKey: initialKey, width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
+      EndingCandEShapeGroup(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier, position: position, fill: fill, stroke: stroke, lineWidth: lineWidth, z_Index: z_Index)
     }
   }
 }
 
 extension Key {
-  init(keyboardKeyID: String, type: KeyType = .C, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat) {
-    self.keyboardKeyID = keyboardKeyID
+  init(pitch: Int, type: KeyType = .C, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat) {
+    self.pitch = pitch
     self.type = type
     self.geoWidth = geoWidth
     self.widthMod = widthMod
@@ -69,7 +68,7 @@ extension Key {
 
 #Preview {
   GeometryReader { geometry in
-    Key(keyboardKeyID: "0", type: .C, geoWidth: geometry.size.width, widthMod: 23, fill: .white)
+    Key(type: .C, geoWidth: geometry.size.width, widthMod: 23, fill: .white)
   }
     .position(x: 92, y: 192)
   .frame(width: 23 * 4, height: 96 * 4)

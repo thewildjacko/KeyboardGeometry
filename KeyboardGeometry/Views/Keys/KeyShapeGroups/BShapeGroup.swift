@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct BShapeGroup: View, KeyShapeGroup {
-  var initialKey: Bool = false
   typealias NoteShape = FandBShape
-  var keyShape: FandBShape { FandBShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
+  var keyShape: NoteShape { FandBShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
   }
   
   var width: CGFloat
@@ -40,7 +39,7 @@ struct BShapeGroup: View, KeyShapeGroup {
     .frame(width: width, height: height)
     .zIndex(z_Index)
     .position(x: position, y: height/2)
-
+    
   }
 }
 

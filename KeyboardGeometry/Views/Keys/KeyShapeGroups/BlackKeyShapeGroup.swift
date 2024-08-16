@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct BlackKeyShapeGroup: View, KeyShapeGroup {
-  var initialKey: Bool = false
   typealias NoteShape = BlackKeyShape
-  var keyShape: BlackKeyShape { BlackKeyShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
+  var keyShape: NoteShape { BlackKeyShape(width: width, height: height, radius: radius, widthMultiplier: widthMultiplier)
   }
   
   var width: CGFloat

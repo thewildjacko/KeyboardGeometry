@@ -7,6 +7,14 @@
 
 import Foundation
 import SwiftUI
+
+protocol Summable { static func +(lhs: Self, rhs: Self) -> Self }
+protocol Subtractable { static func -(lhs: Self, rhs: Self) -> Self }
+protocol Multiplicable { static func *(lhs: Self, rhs: Self) -> Self }
+protocol Divisible { static func /(lhs: Self, rhs: Self) -> Self }
+
+protocol Mathable: Summable, Subtractable, Multiplicable, Divisible { }
+
 extension CGFloat {
   func getKeyPosition(position: CGFloat, widthMod: CGFloat) -> CGFloat {
     return self * position / widthMod
@@ -14,8 +22,15 @@ extension CGFloat {
 }
 
 // A View wrapper to make the modifier easier to use
+// from https://www.hackingwithswift.com/quick-start/swiftui/how-to-detect-device-rotation
 extension View {
     func onRotate(perform action: @escaping (UIDeviceOrientation) -> Void) -> some View {
         self.modifier(DeviceRotationViewModifier(action: action))
     }
+}
+
+extension Int: Mathable {
+  func toPitch(type: KeyType, startingOctave: Int) -> Int {
+    type.rawValue + (startingOctave + 1) * 12
+  }
 }

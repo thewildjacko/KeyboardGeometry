@@ -10,9 +10,8 @@ import SwiftUI
 
 protocol KeyProtocol {
   var id: UUID { get set }
-  
+  var pitch: Int { get set }
   var type: KeyType { get set }
-  var octaveInKeyboard: CGFloat { get set }
   var geoWidth: CGFloat { get set }
   var widthMod: CGFloat { get set }
   var initialKey: Bool { get set }
@@ -27,7 +26,7 @@ protocol KeyProtocol {
   var lineWidth: CGFloat { get set }
   var z_Index: Double { get }
   
-  init(keyboardKeyID: String, type: KeyType, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat)
+  init(pitch: Int, type: KeyType, geoWidth: CGFloat, widthMod: CGFloat, fill: Color, stroke: Color, lineWidth: CGFloat)
 }
 
 extension KeyProtocol {
@@ -86,10 +85,9 @@ extension KeyProtocol {
   
   var KeyWidthAddend: CGFloat { Width.getAddend(type) }
   
-  init(keyboardKeyID: String, _ type: KeyType = .C, octaveInKeyboard: CGFloat = 0, geoWidth: CGFloat, widthMod: CGFloat = 23, fill: Color, stroke: Color = .black, lineWidth: CGFloat = 1, initialKey: Bool = false, keyPosition: CGFloat = 0) {
-    self.init(keyboardKeyID: keyboardKeyID, type: type, geoWidth: geoWidth, widthMod: widthMod, fill: fill, stroke: stroke, lineWidth: lineWidth)
+  init(pitch: Int, _ type: KeyType = .C, geoWidth: CGFloat, widthMod: CGFloat = 23, fill: Color, stroke: Color = .black, lineWidth: CGFloat = 1, initialKey: Bool = false, keyPosition: CGFloat = 0) {
+    self.init(pitch: pitch, type: type, geoWidth: geoWidth, widthMod: widthMod, fill: fill, stroke: stroke, lineWidth: lineWidth)
     
-    self.octaveInKeyboard = octaveInKeyboard
     self.initialKey = initialKey
     self.keyPosition = keyPosition
   }
