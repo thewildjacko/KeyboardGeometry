@@ -58,9 +58,12 @@ struct ContentView: View {
             kb2 = kb2.resize(geoWidth: geo.size.width * 0.85 * 0.5)
             kb3 = kb3.resize(geoWidth: geo.size.width * 0.9)
             
-            kb1.highlightKeys()
-            kb2.highlightKeys()
-            kb3.highlightKeys()
+            let degs1 = [0, 4, 7, 10].map { $0.toPitch(startingOctave: kb1.startingOctave) }
+            let degs2 = [2, 6, 9].map { $0.toPitch(startingOctave: kb2.startingOctave) }
+            
+            kb1.highlightKeys(degs: degs1, color: .cyan)
+            kb2.highlightKeys(degs: degs2, color: .orange)
+            kb3.highlightKeys(degs: degs1, degs2: degs2.map({ $0 + 12 }), color: .cyan, color2: .orange)
           })
       }
     )

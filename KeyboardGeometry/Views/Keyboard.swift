@@ -151,12 +151,40 @@ struct Keyboard: View, Identifiable {
     return Keyboard(title: title, geoWidth: geoWidth, keyCount: keyCount, initialKey: initialKey, startingOctave: startingOctave, octaves: octaves)
   }
   
-  mutating func highlightKeys() {
-    let degs = [60, 64, 67]
-    
-    for deg in degs {
-      if let index = keys.firstIndex(where: { $0.pitch == deg /*$0.keyboardKeyID == "\(id)_\(deg)"*/ }) {
-        keys[index].fill = .red
+  mutating func highlightKeys(degs: [Int], degs2: [Int]? = nil, color: Color, color2: Color? = nil) {
+    if degs2 == nil {
+      for deg in degs {
+        if let index = keys.firstIndex(where: { $0.pitch == deg }) {
+          keys[index].fill = color
+        }
+      }
+    } else if color2 == nil {
+      for deg in degs {
+        if let index = keys.firstIndex(where: { $0.pitch == deg }) {
+          keys[index].fill = color
+        }
+      }
+      
+      if let degs2 = degs2 {
+        for deg in degs2 {
+          if let index = keys.firstIndex(where: { $0.pitch == deg }) {
+            keys[index].fill = color
+          }
+        }
+      }
+    } else {
+      if let degs2 = degs2, let color2 = color2 {
+        for deg in degs {
+          if let index = keys.firstIndex(where: { $0.pitch == deg }) {
+            keys[index].fill = color
+          }
+        }
+        
+        for deg in degs2 {
+          if let index = keys.firstIndex(where: { $0.pitch == deg }) {
+            keys[index].fill = color2
+          }
+        }
       }
     }
   }

@@ -30,7 +30,8 @@ extension View {
 }
 
 extension Int: Mathable {
-  func toPitch(type: KeyType, startingOctave: Int) -> Int {
-    type.rawValue + (startingOctave + 1) * 12
+  func toPitch(startingOctave: Int) -> Int {
+    let type = KeyType(rawValue: self) ?? .C
+    return type.pitchNumber + (startingOctave + 1) * 12
   }
 }
